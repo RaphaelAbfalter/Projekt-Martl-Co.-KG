@@ -22,3 +22,8 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Starten der Seite
+
+Um die Seite zu öffnen muss zuerst im Terminal / in CMD in das Projektverzeichnis navigiert werden, wo der Ordner public zu finden ist.
+Mit dem Befehl php -S localhost:8000 -t public wird dann der Localhost gestartet. Auf http://localhost:8000/ kann dann die Seite eingesehen werden.

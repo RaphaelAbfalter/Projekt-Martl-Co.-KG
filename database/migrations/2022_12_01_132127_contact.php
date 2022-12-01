@@ -29,6 +29,6 @@ class Contact extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('authors');
+        Schema::dropIfExists('contacts');
     }
 }

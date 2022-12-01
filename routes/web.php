@@ -18,3 +18,4 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('test/', 'ContactController@show');
+$router->post('save/', 'ContactController@save');

@@ -17,5 +17,7 @@ $router->get('/', function () use ($router) {
     return view('index');
 });
 
+/* AdminCP */
 $router->get('test/', 'ContactController@show');
 $router->post('save/', 'ContactController@save');
+$router->delete('deleteContact/{id}', ['uses' => 'ContactController@delete']);

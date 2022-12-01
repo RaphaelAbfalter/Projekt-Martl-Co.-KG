@@ -17,6 +17,9 @@ $router->get('/', function () use ($router) {
     return view('index');
 });
 
+/* Login */
+$router->get('login/', 'LoginController@show');
+
 /* AdminCP */
 $router->get('test/', 'ContactController@show');
 $router->post('save/', 'ContactController@save');

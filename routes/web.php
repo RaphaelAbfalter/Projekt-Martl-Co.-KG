@@ -24,3 +24,5 @@ $router->get('login/', 'LoginController@show');
 $router->get('test/', 'ContactController@show');
 $router->post('save/', 'ContactController@save');
 $router->delete('deleteContact/{id}', ['uses' => 'ContactController@delete']);
+
+$router->get('Anfahrtsplan/', 'DriveplanController@show');

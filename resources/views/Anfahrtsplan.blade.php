@@ -23,7 +23,7 @@
 <h3>Anreise mit öffentlichen Verkehrsmittel</h3>
 <p>
     bei Anreise von Außerhalb von Linz empfiehlt es sich mit dem Zug bis zum Hauptbahnhof zu fahren<br>
-    und dann in die Straßenbahn Nummer 1 oder 2 Richtung Ansfelden oder Solarcity bis zur Station Turmstraße zu fahren.<br>
+    und dann in die Straßenbahn Nummer 1 oder 2 Richtung Auwiesen oder Solarcity bis zur Station Turmstraße zu fahren.<br>
     wenn Sie beim Aussteigen nach rechts schauen sehen Sie direckt das Unternehmensgebäude.<br>
 </p>
 

@@ -14,7 +14,11 @@ class CreateDriveplanTable extends Migration
     public function up()
     {
         Schema::create('driveplan', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('Adresse');
+            $table->string('AdressenTyp');
+            $table->string('AnreiseAuto');
+            $table->string('AnreiseÖffi');
             $table->timestamps();
         });
     }

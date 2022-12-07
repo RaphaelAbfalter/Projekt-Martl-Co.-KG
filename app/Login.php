@@ -11,7 +11,10 @@ class Login extends Model
      */
     protected $fillable = [
         'name',
-        'passowrd',
+        'email',
+        'password',
+        'newsletter',
+        'salt',
 
 
     ];    /**

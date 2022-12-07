@@ -1,7 +1,7 @@
 <?php
 
 /** @var \Laravel\Lumen\Routing\Router $router */
-
+namespace Illuminate\Session\Middleware;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -18,9 +18,9 @@ $router->get('/', function () use ($router) {
 });
 
 /* Login */
-$router->get('login/', 'LoginController@show');
+$router->post('login', 'LoginController@login');
+$router->post('register', 'LoginController@create');
 
-/* AdminCP */
-$router->get('test/', 'ContactController@show');
-$router->post('save/', 'ContactController@save');
-$router->delete('deleteContact/{id}', ['uses' => 'ContactController@delete']);
+$router->get('admin', ['middleware' => 'auth', function () {
+    echo "Willkommen";
+}]);

@@ -17,8 +17,8 @@ class CreateDriveplanTable extends Migration
             $table->bigIncrements('id');
             $table->string('Adresse');
             $table->string('AdressenTyp');
-            $table->string('AnreiseAuto');
-            $table->string('AnreiseÖffi');
+            $table->string('AnreiseAuto', 2000);
+            $table->string('AnreiseÖffi', 2000);
             $table->timestamps();
         });
     }

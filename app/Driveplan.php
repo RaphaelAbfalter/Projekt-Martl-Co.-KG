@@ -10,9 +10,10 @@ class Driveplan extends Model
      * @var array
      */
     protected $fillable = [
-        'name',
-        'mail',
-        'message'
+        'Adresse',
+        'AdressenTyp',
+        'AnreiseAuto',
+        'AnreiseÖffi'
     ];
 
     /**

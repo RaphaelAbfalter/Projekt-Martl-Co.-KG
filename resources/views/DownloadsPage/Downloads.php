@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer type="text/javascript" src="Downloads.js"></script>
     <title>Downloads</title>
     <style>.downloads{
         display:flex;
@@ -26,6 +25,26 @@
     /*while(data){
         echo "<a href='".$data["path"]."' download><img src='image/dataIcon.png' width='75'/></a>";
     }*/
+
+    define ( 'MYSQL_HOST',      '127.0.0.1' );
+    define ( 'MYSQL_BENUTZER',  'root' );
+    define ( 'MYSQL_KENNWORT',  '' );
+    define ( 'MYSQL_DATENBANK', 'Downloads' );
+
+    $db_link = mysqli_connect (MYSQL_HOST,
+        MYSQL_BENUTZER,
+        MYSQL_KENNWORT,
+        MYSQL_DATENBANK);
+
+    if ( $db_link )
+    {
+        echo 'Verbindung erfolgreich: ';
+        print_r( $db_link);
+    }
+    else
+    {
+        die('keine Verbindung möglich: ' . mysqli_error());
+    }
 
 
     echo '

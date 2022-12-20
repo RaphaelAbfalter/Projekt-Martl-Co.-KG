@@ -13,6 +13,6 @@
 |
 */
 
-$router->get('/', function () use ($router) {
+$router->get('/downloadspage/downloads.php', function () use ($router) {
     return $router->app->version();
 });

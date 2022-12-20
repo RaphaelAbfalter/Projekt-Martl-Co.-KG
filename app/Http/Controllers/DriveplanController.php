@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Contact;
+use App\Driveplan;
 use App\User;
 use Illuminate\Http\Request;
 

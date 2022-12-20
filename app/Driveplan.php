@@ -22,4 +22,5 @@ class Driveplan extends Model
      * @var array
      */
     protected $hidden = [];
+    protected $table = 'driveplan';
 }

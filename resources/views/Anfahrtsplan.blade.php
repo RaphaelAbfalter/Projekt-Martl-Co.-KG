@@ -12,7 +12,6 @@
 <h3>Adresse</h3>
 <p>Wiener Str. 181, 4020 Linz</p>
 <h1>Anfahrtsbeschreibung</h1>
-<p>Unser Unternehmen ist mit den öffentlichen Verkehrsmitteln sowie mit dem Auto leit erreichbar.</p>
 <h3>Anreise mit dem Auto</h3>
 <p>
     Reisen Sie mit dem Auto können Sie über die Autobahn A7 Anreisen,<br>

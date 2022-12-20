@@ -13,13 +13,12 @@ class UserLogin extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('logins', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email',45);
-            $table->string('password', 45);
-            $table->string('newsletter', 0);
-            $table->string('salt', 10);
+            $table->string('password', 80);
+            $table->string('newsletter', 1);
             $table->timestamps();
         });
     }

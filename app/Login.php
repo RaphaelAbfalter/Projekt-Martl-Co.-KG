@@ -5,19 +5,16 @@ use Illuminate\Database\Eloquent\Model;
 class Login extends Model
 {
     /**
-     * Get the books that belong to this Author
-     */
-    public function books()
-    {
-        return $this->hasMany('\App\Book');
-    }    /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
         'name',
-        'passowrd',
+        'email',
+        'password',
+        'newsletter',
+        'salt',
 
 
     ];    /**

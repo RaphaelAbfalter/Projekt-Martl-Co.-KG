@@ -29,5 +29,7 @@ Route::get('registration', [CustomAuthController::class, 'registration'])->name(
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 */
-Route::get('downloads', [\App\Http\Controllers\DownloadsController::class, 'show'])->name('downloads');
-
+//Route::get('downloads', [\App\Http\Controllers\DownloadsController::class, 'show'])->name('downloads');
+Route::get('/downloads', function () {
+    return view('downloadsPage/downloads');
+});

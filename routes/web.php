@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewsletterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,8 @@ Route::get('/', function () {
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact-send', [ContactController::class, 'create'])->name('contact.send');
+Route::get('newsletter', [NewsletterController::class, 'show']);
+
 
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');

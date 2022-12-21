@@ -9,7 +9,7 @@ class DriveplanController extends Controller
 {
     public function show()
     {
-        return response()->json(Driveplan::all());
+        return view( 'Anfahrtsplan', Driveplan::all());
     }
 
     /**

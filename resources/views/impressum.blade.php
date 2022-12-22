@@ -21,7 +21,7 @@ echo "<h1>Impressum</h1>
 <p>Martl & Co KG \n</p>
 <p>Musterstrasse 1, Stiege 1 Tür 1, \n</p>
 <p>1234 Musterhausen, \n</p>
-<p>Österreich</p> \n;
+<p>Österreich</p> \n
 <p>Unternehmensgegenstand: \n</p>
 <p>UID-Nummer: \n</p>
 <p>GLN: \n</p>
@@ -71,7 +71,10 @@ Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, 
 <p>Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.
 Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:</p>
 Alle Texte sind urheberrechtlich geschützt.";
-?>
+?><br>
+<button type="button" style="height: 25px; width: 150px;">
+    Daten editieren
+</button>
 
 </body>
 </html>

@@ -16,6 +16,9 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('dashboard');
 });
+Route::get('/impressum', function () {
+    return view('impressum');
+});
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact-send', [ContactController::class, 'create'])->name('contact.send');

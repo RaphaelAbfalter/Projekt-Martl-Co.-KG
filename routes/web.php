@@ -20,6 +20,10 @@ Route::get('/impressum', function () {
     return view('impressum');
 });
 
+Route::get('/impressum', function () {
+    return view('impressum');
+});
+
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact-send', [ContactController::class, 'create'])->name('contact.send');
 

@@ -12,10 +12,12 @@ use App\Http\Controllers\ContactController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('dashboard');
 });
+
+
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact-send', [ContactController::class, 'create'])->name('contact.send');
@@ -26,3 +28,8 @@ Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name(
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+*/
+//Route::get('downloads', [\App\Http\Controllers\DownloadsController::class, 'show'])->name('downloads');
+Route::get('/downloads', function () {
+    return view('downloadsPage/downloads');
+});

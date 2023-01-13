@@ -13,10 +13,6 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-
-$router->get('/', function () use ($router) {
-    return view("Index");
-
 Route::get('/', function () {
     return view('dashboard');
 });

@@ -17,6 +17,7 @@ class UserLogin extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('email',45);
+            $table->boolean('admin')->default(0);
             $table->string('password', 80);
             $table->string('newsletter', 1);
             $table->timestamps();

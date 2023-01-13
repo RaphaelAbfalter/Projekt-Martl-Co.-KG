@@ -16,8 +16,11 @@
 <body>
 
 <?php
+$data = \App\impressum::all();
+echo $data;
+?>
 
-echo "<h1>Impressum</h1>
+<h1>Impressum</h1>
 <p>Martl & Co KG \n</p>
 <p>Musterstrasse 1, Stiege 1 Tür 1, \n</p>
 <p>1234 Musterhausen, \n</p>
@@ -70,8 +73,9 @@ Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, 
 <h2>Bildernachweis</h2>
 <p>Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.
 Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:</p>
-Alle Texte sind urheberrechtlich geschützt.";
-?><br>
+<p>Alle Texte sind urheberrechtlich geschützt.</p>
+?>
+<br>
 <button type="button" style="height: 25px; width: 150px;">
     Daten editieren
 </button>

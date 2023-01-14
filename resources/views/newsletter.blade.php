@@ -1,7 +1,7 @@
 @extends('dashboard')
 @section('content')
 <div class="main">
-    < <h1>Subscribe to our newsletter</h1>
+    <h1>Subscribe to our newsletter</h1>
     <form action="{{ route('newsletter.store') }}" method="post">
         @csrf
         <label for="email">Email:</label>
@@ -18,3 +18,4 @@
     </div>
     @endif
 </div>
+@endsection

@@ -28,5 +28,6 @@ Route::post('custom-registration', [CustomAuthController::class, 'customRegistra
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 Route::get('newsletter', 'NewsletterController@index');
 Route::post('newsletter', 'NewsletterController@store')->name('newsletter.store');
-Route::get('/download', 'FileController@download')->name('download');
-Route::post('/upload', 'FileController@upload');
+Route::get('/downloads', 'FileController@index')->name('download');
+Route::get('/downloads/{file}', 'FileController@download')->name('download.file');
+Route::post('/download/upload', [FileController::class, 'upload'])->name('upload');

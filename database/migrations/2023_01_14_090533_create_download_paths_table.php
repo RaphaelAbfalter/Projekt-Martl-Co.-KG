@@ -11,14 +11,17 @@ class CreateDownloadPathsTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('download_paths', function (Blueprint $table) {
-            $table->id();
-            $table->string('path');
-            $table->timestamps();
-        });
-    }
+        public function up()
+        {
+            Schema::create('download_paths', function (Blueprint $table) {
+                $table->id();
+                $table->string('path');
+                $table->unsignedBigInteger('user_id');
+                $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+                $table->timestamps();
+            });
+        }
+
 
     /**
      * Reverse the migrations.

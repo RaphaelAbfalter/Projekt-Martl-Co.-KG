@@ -31,6 +31,7 @@ return array(
     'App\\Listeners\\ExampleListener' => $baseDir . '/app/Listeners/ExampleListener.php',
     'App\\Login' => $baseDir . '/app/Login.php',
     'App\\Mail\\NewSubscriber' => $baseDir . '/app/Mail/NewSubscriber.php',
+    'App\\Models\\DownloadPath' => $baseDir . '/app/Models/DownloadPath.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

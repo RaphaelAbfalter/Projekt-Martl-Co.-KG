@@ -2,28 +2,95 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class NewsletterController extends Controller
 {
     public function index()
     {
-        return view('newsletter');
+        $newsletters = Newsletter::all();
+        $user = Auth::user();
+        if ($user) {
+            if ($user->admin) {
+                return view('newsletter', ['newsletter' => $newsletters, 'user' => $user, 'showForm' => true]);
+            } else {
+                return view('newsletter', ['newsletter' => $newsletters, 'user' => $user, 'showForm' => false]);
+            }
+        } else {
+            return view('newsletter', ['newsletter' => $newsletters, 'user' => $user, 'showForm' => false]);
+        }
+    }
+
+    public function create()
+    {
+        return view('newsletter.create');
     }
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'email' => 'required|email|unique:subscribers',
-        ]);
+        $user = Auth::user();
+        if ($user) {
+            if ($user->admin) {
+                $newsletter = new Newsletter();
+                $newsletter->title = $request->input('title');
+                $newsletter->text = $request->input('text');
+                $newsletter->user_id = $user->id;
+                $newsletter->save();
+                return redirect()->route('newsletter');
+            } else {
+                return redirect()->route('newsletter');
+            }
+        } else {
+            return redirect()->route('newsletter');
+        }
+    }
 
-        $subscriber = new Subscriber();
-        $subscriber->email = $request->email;
-        $subscriber->save();
-        
-        Mail::to('admin@regina-martl.at')->send(new NewSubscriber($subscriber));
+    public function show($id)
+    {
+        $newsletter = Newsletter::find($id);
+        return view('newsletters.show', ['newsletter' => $newsletter]);
+    }
 
-        return redirect()->back()->with('success', 'You have been subscribed to our newsletter!');
+    public function edit($id)
+    {
+        $newsletter = Newsletter::find($id);
+        return view('newsletters.edit', ['newsletter' => $newsletter]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $user = Auth::user();
+        if ($user) {
+            if ($user->admin) {
+                $newsletter = Newsletter::find($id);
+                $newsletter->title = $request->input('title');
+                $newsletter->text = $request->input('text');
+                $newsletter->save();
+                return redirect()->route('newsletter');
+            } else {
+                return redirect()->route('newsletter');
+            }
+        } else {
+            return redirect()->route('newsletter');
+        }
+    }
+
+    public function destroy($id)
+    {
+        $user = Auth::user();
+        if ($user) {
+            if ($user->admin) {
+                $newsletter = Newsletter::findOrFail($id);
+                $newsletter->delete();
+                return redirect()->route('newsletter')->with('success', 'Newsletter successfully deleted.');
+            } else {
+                return redirect()->route('newsletter')->with('error', 'You do not have permission to delete newsletters.');
+            }
+        } else {
+            return redirect()->route('newsletter')->with('error', 'You must be logged in to delete newsletters.');
+        }
     }
 }

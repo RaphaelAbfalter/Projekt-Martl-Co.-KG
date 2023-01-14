@@ -472,6 +472,7 @@ class ComposerStaticInitfe2d19771c50efa10c0ea1764f6559c5
         'App\\Listeners\\ExampleListener' => __DIR__ . '/../..' . '/app/Listeners/ExampleListener.php',
         'App\\Login' => __DIR__ . '/../..' . '/app/Login.php',
         'App\\Mail\\NewSubscriber' => __DIR__ . '/../..' . '/app/Mail/NewSubscriber.php',
+        'App\\Models\\DownloadPath' => __DIR__ . '/../..' . '/app/Models/DownloadPath.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

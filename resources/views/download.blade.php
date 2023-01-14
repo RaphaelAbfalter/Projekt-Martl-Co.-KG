@@ -12,6 +12,7 @@
         }
     </style>
 </head>
+@include('header')
 <body>
     <nav>Navigation</nav>
     <h1>Downloads</h1>
@@ -34,6 +35,7 @@
     </div>
     <footer>Hier footer</footer>
 </body>
+@include('footer')
 </html>
 
 

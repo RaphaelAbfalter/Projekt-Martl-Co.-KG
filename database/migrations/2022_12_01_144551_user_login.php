@@ -19,7 +19,6 @@ class UserLogin extends Migration
             $table->string('email',45);
             $table->boolean('admin')->default(0);
             $table->string('password', 80);
-            $table->string('newsletter', 1);
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class UserLogin extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('logins');
     }
 }

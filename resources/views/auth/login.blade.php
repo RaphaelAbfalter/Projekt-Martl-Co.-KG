@@ -1,6 +1,6 @@
 @extends('dashboard')
 @section('content')
-    <main class="login-form">
+    <div class="login-form">
         <div class="cotainer">
             <div class="row justify-content-center">
                 <div class="col-md-4">
@@ -38,5 +38,5 @@
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 @endsection

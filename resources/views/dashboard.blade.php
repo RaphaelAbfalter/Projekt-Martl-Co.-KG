@@ -5,6 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+@include('header')
 <nav class="navbar navbar-dark navbar-expand-lg mb-5 bg-dark">
     <div class="container">
         <a class="navbar-brand mr-auto" href="/">{{ config('app.name') }}</a>

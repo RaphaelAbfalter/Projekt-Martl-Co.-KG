@@ -4,6 +4,8 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\AnfahrtsplanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,24 +21,47 @@ Route::get('/', function () {
     return view('index');
 });
 
+//CONTACT
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
-Route::post('contact-send', [ContactController::class, 'create'])->name('contact.send');
+Route::post('contact', [ContactController::class, 'send'])->name('contact.send');
 
+//LOGIN AND REGISTRATION
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+
+//NEWSLETTER
 Route::get('newsletter', [NewsletterController:: class, 'index'])->name('newsletter');
 Route::get('/newsletter/create', [NewsletterController:: class, 'create'])->name('newsletter.create');
 Route::post('/newsletter', [NewsletterController:: class, 'store'])->name('newsletter.store');
-Route::get('/newsletter/{newsletter}/edit', [NewsletterController:: class,'edit'])->name('newsletter.edit');
+Route::get('/newsletter/{newsletter}/edit', [NewsletterController:: class,'edit'])->name('newsletter_edit');
 Route::patch('/newsletter/{newsletter}', [NewsletterController:: class, 'update'])->name('newsletter.update');
 Route::delete('/newsletter/{newsletter}', [NewsletterController:: class, 'destroy'])->name('newsletter.destroy');
-Route::get('/downloads', [FileController::class, 'index'])->name('download');
-Route::get('/downloads/{file}', [FileController::class, 'download'])->name('download.file');
-Route::post('/download/upload', [FileController::class, 'upload'])->name('upload');
+Route::post('/subscriber', [SubscriberController:: class, 'store'])->name('subscriber.store');
+Route::put('newsletter/{id}', [NewsletterController::class, 'update'])->name('newsletter.update');
+
+//DOWNLOADS
+Route::get('/downloads', 'FileController@index')->name('download');
+Route::get('/downloads/{file}', 'FileController@download')->name('download');
+Route::post('/upload', 'FileController@upload')->name('upload');
+
+
+//VIDEO
 Route::get('/videos', function () {
     return view('videos');
+});
+
+//PROJEKTMANAGEMENT
+Route::get('/projektmanagement', function () {
+    return view('projektmanagement');
+});
+
+//ANFAHRTSPLAN
+Route::get('/anfahrtsplan', [AnfahrtsplanController::class, 'show'])->name('anfahrtsplan');
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/anfahrtsplan/edit', [AnfahrtsplanController::class, 'edit'])->name('anfahrtsplan_edit');
+    Route::patch('/anfahrtsplan', [AnfahrtsplanController::class, 'update'])->name('anfahrtsplan');
 });

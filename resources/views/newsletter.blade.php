@@ -2,7 +2,7 @@
 @section('content')
     <nav>Navigation</nav>
     <h1>Newsletters</h1>
-    @if (Auth::check() && Auth::user()->admin)
+    @if ($showForm)
         <form action="{{ route('newsletter.store') }}" method="post">
             @csrf
             <label for="title">Title:</label>
@@ -14,7 +14,7 @@
             <input type="submit" value="Create Newsletter">
         </form>
     @else
-        <form action="{{ route('newsletter.store') }}" method="post">
+        <form action="{{ route('subscriber.store') }}" method="post">
             @csrf
             <label for="email">Email:</label>
             <input type="email" name="email" id="email">
@@ -23,16 +23,20 @@
         </form>
     @endif
     <ul>
-        @foreach ($newsletter as $newsletters)
+        @foreach ($newsletters as $newsletter)
             <li>
                 <h2>{{ $newsletter->title }}</h2>
-                <p>{{ $newsletter->text }}</p>
+                <p>{{ $newsletter->body }}</p>
                 <p>Published at: {{ $newsletter->created_at }}</p>
-                @if (Auth::check() && Auth::user()->admin)
+                @if ($showForm)
                     <form action="{{ route('newsletter.destroy', $newsletter->id) }}" method="post">
                         @csrf
                         @method('DELETE')
                         <input type="submit" value="Delete Newsletter">
+                    </form>
+                    <form action="{{ route('newsletter_edit', $newsletter->id) }}" method="get">
+                        @csrf
+                        <input type="submit" value="Edit Newsletter">
                     </form>
                 @endif
             </li>

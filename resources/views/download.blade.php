@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Downloads</title>
-    <style>
-        .downloads {
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
-</head>
-@include('header')
+@extends('dashboard')
+@section('content')
 <body>
     <nav>Navigation</nav>
     <h1>Downloads</h1>
@@ -20,24 +7,34 @@
         <ul>
             @foreach($files as $file)
                 <li>
-                    <a href="{{ route('download.file', $file->id) }}">{{ basename($file->path) }}</a>
+                    <a href="{{ route('download.file', $file->id) }}">{{ $file->name }}</a>
                 </li>
             @endforeach
         </ul>
         <br>
-        @if($showUpload)
+        @if($isAdmin)
             <form method="post" action="{{ route('upload') }}" enctype="multipart/form-data">
                 @csrf
-                <input type="file" name="file">
+                <label for="file">Select file to upload:</label>
+                <input type="file" name="file" id="file">
+                <br>
+                <label for="access_level">Select access level:</label>
+                <select id="access_level" name="access_level">
+                    <option value="all">All Users</option>
+                    <option value="specific">Specific Users</option>
+                </select>
+                <br>
+                @if(old('access_level') == 'specific')
+                    <label for="users">Select specific users:</label>
+                    <select id="users" name="users[]" multiple>
+                        @foreach($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                        @endforeach
+                    </select>
+                @endif
+                <br>
                 <input type="submit" value="Upload">
             </form>
         @endif
     </div>
-    <footer>Hier footer</footer>
-</body>
-@include('footer')
-</html>
-
-
-
-
+@endsection

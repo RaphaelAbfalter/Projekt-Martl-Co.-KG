@@ -16,23 +16,7 @@ class FileController extends Controller
 
     public function download(DownloadFile $file)
     {
-        if($file->visibility == 'all' || $file->visibility == 'specific' && $file->user_id == auth()->id()){
-            +
-            // connect to FTP server (port 21)
-            $conn_id = ftp_connect($ftp_server, 21) or die("Couldn't connect to $ftp_server");
-            ftp_login($conn_id, $ftp_username, $ftp_userpass);
-            ftp_pasv($conn_id, true);
-
-            $local_file = storage_path('app/'.$file->path);
-            $server_file = $file->path;
-
-            ftp_get($conn_id, $local_file, $server_file, FTP_BINARY);
-
-            ftp_close($conn_id);
-            return response()->download($local_file, basename($local_file));
-        }else{
-            return back()->with('error', 'File is not available for download');
-        }
+        
     }
 
     public function index()

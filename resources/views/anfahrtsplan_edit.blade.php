@@ -1,7 +1,7 @@
 @extends('dashboard')
 @section('content')
     <h1>Edit Anfahrtsplan</h1>
-    <form action="{{ route('anfahrtplan.update') }}" method="post">
+    <form action="{{ route('anfahrtsplan_update') }}" method="post">
         @csrf
         @method('PUT')
         <label for="addressOffice">Firmensitz Adresse:</label>

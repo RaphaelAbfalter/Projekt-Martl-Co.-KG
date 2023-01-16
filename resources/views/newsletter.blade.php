@@ -42,5 +42,4 @@
             </li>
         @endforeach
     </ul>
-    <footer>Here footer</footer>
 @endsection

@@ -18,7 +18,7 @@
     <h3>Anreise mit öffentlichen Verkehrsmittel</h3>
     <p> {{ $texts->publicTransportToWorkshop }}</p>
     @if($isAdmin)
-        <form action="{{ route('anfahrtplan_edit') }}" method="get">
+        <form action="{{ route('anfahrtsplan_edit') }}" method="get">
             <input type="submit" value="Edit">
         </form>
     @endif

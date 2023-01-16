@@ -38,7 +38,6 @@ Route::get('newsletter', [NewsletterController:: class, 'index'])->name('newslet
 Route::get('/newsletter/create', [NewsletterController:: class, 'create'])->name('newsletter.create');
 Route::post('/newsletter', [NewsletterController:: class, 'store'])->name('newsletter.store');
 Route::get('/newsletter/{newsletter}/edit', [NewsletterController:: class,'edit'])->name('newsletter_edit');
-Route::patch('/newsletter/{newsletter}', [NewsletterController:: class, 'update'])->name('newsletter.update');
 Route::delete('/newsletter/{newsletter}', [NewsletterController:: class, 'destroy'])->name('newsletter.destroy');
 Route::post('/subscriber', [SubscriberController:: class, 'store'])->name('subscriber.store');
 Route::put('newsletter/{id}', [NewsletterController::class, 'update'])->name('newsletter.update');
@@ -61,7 +60,5 @@ Route::get('/projektmanagement', function () {
 
 //ANFAHRTSPLAN
 Route::get('/anfahrtsplan', [AnfahrtsplanController::class, 'show'])->name('anfahrtsplan');
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/anfahrtsplan/edit', [AnfahrtsplanController::class, 'edit'])->name('anfahrtsplan_edit');
-    Route::patch('/anfahrtsplan', [AnfahrtsplanController::class, 'update'])->name('anfahrtsplan');
-});
+Route::get('/anfahrtsplan_edit', [AnfahrtsplanController::class, 'edit'])->name('anfahrtsplan_edit');
+Route::put('/anfahrtsplan', [AnfahrtsplanController::class, 'update'])->name('anfahrtsplan_update');

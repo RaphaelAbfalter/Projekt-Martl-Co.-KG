@@ -29,6 +29,6 @@ class CreateDownloadFilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('download_file');
+        Schema::dropIfExists('download_files');
     }
 }

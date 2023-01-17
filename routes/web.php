@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ImpressumController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\SubscriberController;
@@ -62,3 +63,9 @@ Route::get('/projektmanagement', function () {
 Route::get('/anfahrtsplan', [AnfahrtsplanController::class, 'show'])->name('anfahrtsplan');
 Route::get('/anfahrtsplan_edit', [AnfahrtsplanController::class, 'edit'])->name('anfahrtsplan_edit');
 Route::put('/anfahrtsplan', [AnfahrtsplanController::class, 'update'])->name('anfahrtsplan_update');
+
+
+//IMPRESSUM
+Route::get('/impressum', [ImpressumController::class, 'show'])->name('impressum');
+Route::get('/impressum_edit', [ImpressumController::class, 'edit'])->name('impressum_edit');
+Route::put('/impressum', [ImpressumController::class, 'update'])->name('impressum.update');

@@ -1,7 +1,6 @@
 @extends('dashboard')
 @section('content')
 <body>
-    <nav>Navigation</nav>
     <h1>Downloads</h1>
     <div class="downloads">
         <ul>
@@ -24,17 +23,27 @@
                     <option value="specific">Specific Users</option>
                 </select>
                 <br>
-                @if(old('access_level') == 'specific')
+                <div id="specific_users" style="display: none">
                     <label for="users">Select specific users:</label>
                     <select id="users" name="users[]" multiple>
                         @foreach($users as $user)
                             <option value="{{ $user->id }}">{{ $user->name }}</option>
                         @endforeach
                     </select>
-                @endif
+                </div>
                 <br>
                 <input type="submit" value="Upload">
             </form>
         @endif
     </div>
+
+<script>
+    document.getElementById("access_level").addEventListener("change", function(){
+        if(this.value === "specific"){
+            document.getElementById("specific_users").style.display = "block";
+        } else {
+            document.getElementById("specific_users").style.display = "none";
+        }
+    });
+</script>
 @endsection

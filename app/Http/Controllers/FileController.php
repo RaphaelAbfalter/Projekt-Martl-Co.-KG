@@ -33,42 +33,25 @@ class FileController extends Controller
 
     public function upload(Request $request)
     {
-        $request->validate([
-            'file' => 'required|file|max:2048',
-            'access_level' => 'required|in:all,specific',
-        ]);
+        $isAdmin = Auth::user() && Auth::user()->admin;
 
-        $file = $request->file('file');
-        $access_level = $request->input('access_level');
-        $user_id = null;
-
-        if ($access_level == 'specific') {
+        if($isAdmin)
+        {
             $request->validate([
-                'users' => 'required|array',
-                'users.*' => 'required|exists:users,id',
+                'file' => 'required|file|max:2048',
             ]);
-            $user_id = $request->input('users')[0];
+    
+            $file = $request->file('file');
+            $path = $file->store('files');
+            $visibility = $request->input('access_level');
+            $user_id = ($visibility == 'all') ? null : $request->input('users');
+    
+            DownloadFile::create(['path' => $path, 'user_id' => $user_id, 'visibility' => $visibility]);
+    
+            return redirect()->route('downloads')->with('success', 'File has been uploaded successfully');
         }
 
-        $user = auth()->user();
-
-        if ($user && $user->is_admin) {
-            $filename = uniqid().'.'.$file->extension();
-
-            $path = 'downloads/'.$filename;
-
-            $file->storeAs('downloads', $filename);
-
-            $download_file = DownloadFile::create([
-                'path' => $path,
-                'user_id' => $user_id,
-                'visibility' => $access_level,
-            ]);
-
-            return back()->with('success', 'File has been uploaded successfully.');
-        } else {
-            return back()->with('error', 'You are not authorized to upload files.');
-        }
+        return redirect()->route('downloads')->with('error', 'File cannot be uploaded due to missing authorization.');
     }
 
 }

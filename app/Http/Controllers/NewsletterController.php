@@ -104,7 +104,7 @@ class NewsletterController extends Controller
             {
                 foreach(Newsletter::all() as $users)
                 {
-                    mail($users->mail, $request['subject'], $request['message']);
+                    mail($users->mail['email'], $request['subject'], $request['message']);
                 }
             }
         }

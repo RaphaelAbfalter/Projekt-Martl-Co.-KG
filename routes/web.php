@@ -16,13 +16,6 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view('dashboard');
 });
-Route::get('/impressum', function () {
-    return view('impressum');
-});
-
-Route::get('/impressum', function () {
-    return view('impressum');
-});
 
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact-send', [ContactController::class, 'create'])->name('contact.send');
@@ -33,3 +26,10 @@ Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name(
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+
+//IMPRESSUM
+Route::get('/impressum', [ImpressumController::class, 'show'])->name('impressum');
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/impressum/edit', [ImpressumController::class, 'edit'])->name('impressum_edit');
+    Route::patch('/impressum', [ImpressumController::class, 'update'])->name('impressum');
+});

@@ -2,26 +2,62 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Routing\Controller as BaseController;
+use App\Models\Anfahrtsplan;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ImpressumController extends Controller
 {
+    public function show()
+    {
+        $texts = Impressum::first();
+        $user = Auth::user();
 
-public function show()
-{
-    return view( 'Impressum', Impressum::all());
-}
+        if($user)
+        {
+            if($user->admin)
+            {
+                return view('impressum', ['texts' => $texts, 'isAdmin' => true]);
+            }
+        }
 
-/**
- * @param Request $request
- * @return \Illuminate\Http\JsonResponse
- */
-public function save(Request $request)
-{
-    $contacts = Impressum::create($request->all());
-    return response()->json($contacts, 201);
-}
+        return view('impressum', ['texts' => $texts, 'isAdmin' => false]);
+
+    }
+
+    public function edit()
+    {
+        if(!Auth::user()->admin) {
+            return redirect()->back()->withErrors(['You do not have permission to access this page.']);
+        }
+
+        $texts = Impressum::first();
+        return view('impressum_edit', compact('texts'));
+    }
+
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+
+        if($user)
+        {
+            if($user->admin) {
+                $texts = Impressum::first();
+                $texts->firmenanschrift = $request->firmenanschrift;
+                $texts->unternehmensgegenstand = $request->unternehmensgegenstand;
+                $texts->UIDNummer = $request->UIDNummer;
+                $texts->GLA = $request->GLA;
+                $texts->GISA = $request->GISA;
+                $texts->telefonnummer = $request->telefonnummer;
+                $texts->fax = $request->fax;
+                $texts->email = $request->email;
+                $texts->adresse = $request->adresse;
+                $texts->save();
+
+                return view('impressum', ['texts' => $texts, 'isAdmin' => true]);
+            }
+        }
+
+        return redirect()->back()->withErrors(['You do not have permission to access this page.']);
+    }
 }

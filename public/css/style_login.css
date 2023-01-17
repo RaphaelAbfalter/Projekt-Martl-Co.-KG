@@ -6,9 +6,6 @@
     background-color: var(--secondary-color);
     color:var(--text-color);
 }
-body{
-    height: 100vh;
-}
 .container{
     height: auto;
 }

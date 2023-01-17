@@ -24,14 +24,10 @@
         <!-- custom stylesheet -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style_footer.css')}}" >
         <!-- custom stylesheet -->
-        
-        
     </head>
     <body>
-    @include('header')
-
-    @yield('content')
-
-    @include('footer')
+        @include('header')
+        @yield('content')
+        @include('footer')
     </body>
 </html>

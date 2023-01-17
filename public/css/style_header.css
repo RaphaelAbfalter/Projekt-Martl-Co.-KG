@@ -36,13 +36,15 @@ nav>span>a{
     position: relative;
     z-index: 1;
 }
-button{
+.nav-button{
     border-radius: 0.8rem;
     transition: all 0.2s;
     color: var(--main-color);
     background-color: var(--main-theme);
     padding: 0.8rem;
 }
-button:hover{
+.nav-button:hover{
     background-color: var(--text-color);
+    color:var(--main-color);
+    text-decoration: none;
 }

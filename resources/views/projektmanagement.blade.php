@@ -1,5 +1,7 @@
 @extends('dashboard')
 @section('content')
+<!-- custom stylesheet -->
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style_proj.css')}}">
     <section class="mech-kons">
         <h1>Mechanische Konstruktion in Autodesk<br> 
         Inventor und Solidworks</h1>

@@ -14,21 +14,18 @@
         <!-- icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <!-- custom main stylesheet -->
-        <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
         <!-- custom stylesheet -->
-        <link rel="stylesheet" type="text/css" href="./src/css/style_index.css" >
         <!-- carousel logic -->
-        <script defer type="text/javascript" src="./src/js/carousel.js"></script>
        <!-- custom stylesheet -->
-       <link rel="stylesheet" type="text/css" href="./src/css/style_header.css" >
+       <link rel="stylesheet" type="text/css" href="{{ asset('css/style_header.css')}}" >
        <!-- main logic -->
-       <script defer type="text/javascript" src="./src/js/main.js"></script>
+       <script defer type="text/javascript" src="{{asset('js/main.js')}}"></script>
         <!-- custom stylesheet -->
-        <link rel="stylesheet" type="text/css" href="./src/css/style_footer.css" >
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/style_footer.css')}}" >
         <!-- custom stylesheet -->
-        <link rel="stylesheet" type="text/css" href="./src/css/style_login.css" >
-        <!-- custom stylesheet -->
-        <link rel="stylesheet" type="text/css" href="./src/css/style_proj.css">
+        
+        
     </head>
     <body>
     @include('header')
@@ -38,4 +35,3 @@
     @include('footer')
     </body>
 </html>
-

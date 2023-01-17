@@ -3,10 +3,10 @@
         <img src="assets/Logo_CSB_.svg">
     </span>
     <span>
-            <a href="">Kontakt</a>
-            <a href="">Anfahrt</a>
-            <a href="">Newsletter</a>
-            <a href="">Impressum</a>
+            <a href="/contact">Kontakt</a>
+            <a href="/anfahrtsplan">Anfahrt</a>
+            <a href="/newsletter">Newsletter</a>
+            <a href="/impressum">Impressum</a>
     </span>
     <span></span>
 </div>

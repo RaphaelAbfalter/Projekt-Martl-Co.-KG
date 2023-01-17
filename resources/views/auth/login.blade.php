@@ -1,5 +1,6 @@
 @extends('dashboard')
 @section('content')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style_login.css')}}" >
     <div class="login-form">
         <div class="cotainer">
             <div class="row justify-content-center">

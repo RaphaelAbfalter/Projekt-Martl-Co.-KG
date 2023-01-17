@@ -1,6 +1,5 @@
 @extends('dashboard')
 @section('content')
-    <nav>Navigation</nav>
     <h1>Newsletters</h1>
     @if ($showForm)
         <form action="{{ route('newsletter.store') }}" method="post">

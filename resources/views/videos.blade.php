@@ -1,6 +1,6 @@
 @extends('dashboard')
 @section('content')
-<body> 
+<main> 
 	<div>
 		<h2>AOI-Roboterzelle mit Verkettung</h2>
 		<video controls muted loop preload>
@@ -33,5 +33,5 @@
 			<p>*Footer* Kontakt - Anfahrt - News - Impressum *Footer*</p>
 		</footer>
 	</div>
-</body>
+</main>
 @endsection

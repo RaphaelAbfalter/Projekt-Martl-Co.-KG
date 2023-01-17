@@ -10,7 +10,7 @@
                             <p class="card-text">
 
                                 <!-- Post Start -->
-                            <form action="{{ route('contact.send') }}" method="post">
+                            <form action="{{ route('contact.create') }}" method="post">
                                 @csrf
                                 <!-- Vorname und Nachname -->
                                 <div class="name">

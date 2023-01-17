@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 //CONTACT
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
-Route::post('contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('contact', [ContactController::class, 'create'])->name('contact.create');
 
 //LOGIN AND REGISTRATION
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']);

@@ -4,7 +4,7 @@
 	<div>
 		<h2>AOI-Roboterzelle mit Verkettung</h2>
 		<video controls muted loop preload>
-			<source src="{{ public_path('videos/roboter1.mp4') }}" type="video/mp4">
+			<source src="{{ asset('videos/roboter1.mp4') }}" type="video/mp4">
 		</video>
 		<ul>
 			<li>Löten von Elektronikbauteilen</li>
@@ -18,7 +18,7 @@
 
 		<h2>Roboterhandlingsgerät für Ferritkerne</h2>
 		<video controls muted loop preload>
-			<source src="{{ public_path('videos/roboter2.mp4') }}" type="video/mp4"></source>
+			<source src="{{ asset('videos/roboter2.mp4') }}" type="video/mp4"></source>
 		</video>
 		<ul>
 			<li>Abnahme von Ferritkernen aus Presse</li>

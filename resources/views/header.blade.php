@@ -12,6 +12,7 @@
                      <span class="dropdown-content" data-dropdown="dropdown">
                             <a href="/videos">Videos</a>
                             <a href="/newsletter">Newsletter</a>
+                            <a href="/downloads">Downloads</a>
                             <a href="/anfahrtsplan">Anfahrt</a>
                             <a href="/impressum">Impressum</a>
                      </span>

@@ -64,7 +64,7 @@ Route::get('/anfahrtsplan_edit', [AnfahrtsplanController::class, 'edit'])->name(
 Route::put('/anfahrtsplan', [AnfahrtsplanController::class, 'update'])->name('anfahrtsplan_update');
 
 //IMPRESSUM
-Route::get('/impressum', [ImpressumController::class, 'show'])->name('impressum');
-Route::get('/impressum_edit', [ImpressumController::class, 'edit'])->name('impressum_edit');
-Route::put('/impressum', [ImpressumController::class, 'update'])->name('impressum_update');
+Route::get('/impressum', [\App\Http\Controllers\ImpressumController::class, 'show'])->name('impressum');
+Route::get('/impressum_edit', [\App\Http\Controllers\ImpressumController::class, 'edit'])->name('impressum_edit');
+Route::put('/impressum', [\App\Http\Controllers\ImpressumController::class, 'update'])->name('impressum_update');
 

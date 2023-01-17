@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Anfahrtsplan;
+use App\Models\Impressum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 

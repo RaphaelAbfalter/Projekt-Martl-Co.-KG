@@ -1,0 +1,16 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    height: 7rem;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: var(--secondary-color);
+}
+footer>span:nth-child(1)>img,
+footer>span:nth-child(1){
+    height: inherit;
+}
+span:nth-child(3){
+    width: 7rem;
+}
+a:not(:empty) + a:not(:empty)::before { content: ' • '; }

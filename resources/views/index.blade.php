@@ -1,27 +1,32 @@
 @extends('dashboard')
 @section('content')
-    <section id="upperPage">
-        <span>
-
-        </span>
-
-        <span>
-      <p>Text</p>
-        </span>
-
-        <span>
-
-        </span>
-
-        <img id="" src="test" alt=""/>
-        <img id="" src="test2" alt=""/>
-        <img id="" src="test3" alt=""/>
-    </section>
-
-    <section id="lowerPage">
-        <div>
-            <img id="" src="test4" alt=""/>
-            <p>Adresse</p>
+<section class="hero">
+    <img class="hero-img" src="./assets/martl_cokg.png" alt="Martl & CO. KG Gebäude"/>
+    <h1>Willkommen bei Martl & CO. KG 
+        <br>
+        Automatisierungstechnik - Konstruktion - Maschinenbau
+    </h1>
+</section>
+<section class="content">
+    <div class="carousel">
+        <button class="arrow-left left">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+        <div class="slide">
+            <p>Widerstandsschweißroboter</p>
+            <img src="./assets/Widerstandsschweissroboter.jpg" alt="Widerstandsschweissroboter"/>
         </div>
-    </section>
+        <div class="slide hidden">
+            <p>Endmessdrehteller</p>
+            <img src="./assets/Endmessdrehteller.jpg" alt="Endmessdrehteller"/>
+        </div>
+        <div class="slide hidden">
+            <p>Laserschweißdrehteller</p>
+            <img src="./assets/Laserschweissdrehteller.jpg" alt="Laserschweissdrehteller"/>
+        </div>
+        <button class="arrow-right right">
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+</section>
 @endsection

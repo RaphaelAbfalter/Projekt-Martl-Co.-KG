@@ -1,0 +1,14 @@
+.card{
+    padding: 4rem;
+    position:absolute;
+    height: auto;
+    width: auto;
+    background-color: var(--secondary-color);
+    color:var(--text-color);
+}
+body{
+    height: 100vh;
+}
+.container{
+    height: auto;
+}

@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-theme:#fa1112;
+    --secondary-theme:#fa3233;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --main-color:#1f1f1f;
+        --secondary-color:#303030;
+        --text-color:#f1f1f1;
+    }
+}
+@media (prefers-color-scheme: light){
+    :root{
+        --main-color:#f1f1f1;
+        --secondary-color:#e2e2e2;
+        --text-color:#1f1f1f;
+    }
+}
+body{
+    background-color:var(--main-color);
+}
+h1,p, a, a:hover{
+    color: var(--text-color);
+}
+a, button{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+path{
+    stroke: var(--text-color);
+}

@@ -52,7 +52,7 @@ Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, 
 
 <h2>Bildernachweis</h2>
 <p>Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.
-Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:</p>
+Die Bilderrechte liegen bei den folgenden Unternehmen: {{ $texts->firmenanschrift }}</p>
 <p>Alle Texte sind urheberrechtlich geschützt.</p>
 ?>
 <br>

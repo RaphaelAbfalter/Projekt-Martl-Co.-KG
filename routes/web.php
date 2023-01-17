@@ -65,7 +65,6 @@ Route::put('/anfahrtsplan', [AnfahrtsplanController::class, 'update'])->name('an
 
 //IMPRESSUM
 Route::get('/impressum', [ImpressumController::class, 'show'])->name('impressum');
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/impressum/edit', [ImpressumController::class, 'edit'])->name('impressum_edit');
-    Route::patch('/impressum', [ImpressumController::class, 'update'])->name('impressum');
-});
+Route::get('/impressum_edit', [ImpressumController::class, 'edit'])->name('impressum_edit');
+Route::put('/impressum', [ImpressumController::class, 'update'])->name('impressum_update');
+

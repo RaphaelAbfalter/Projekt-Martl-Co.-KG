@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
 {
-    public function download(DownloadFile $file)
+    public function download($id)
     {
+        $file = DownloadFile::findOrFail($id);
         if ($file->visibility == 'all' || ($file->visibility == 'specific' && $file->user_id == auth()->id())) {
             return Storage::download($file->path, $file->name);
         } else {
@@ -27,8 +28,13 @@ class FileController extends Controller
 
         $isAdmin = Auth::user() && Auth::user()->admin;
         $users = User::all();
+       
+        if($files->count() > 0)
+        {
+            return view('download', ['files' => $files, 'isAdmin' => $isAdmin, 'users' => $users, 'no_files' => false]);
+        }
 
-        return view('download', compact('files', 'isAdmin', 'users'));
+        return view('download', ['files' => $files, 'isAdmin' => $isAdmin, 'users' => $users, 'no_files' => true]);
     }
 
     public function upload(Request $request)
@@ -37,21 +43,18 @@ class FileController extends Controller
 
         if($isAdmin)
         {
-            $request->validate([
-                'file' => 'required|file|max:2048',
-            ]);
-    
             $file = $request->file('file');
-            $path = $file->store('files');
+            $path = Storage::putFile('public/files', $file);
             $visibility = $request->input('access_level');
-            $user_id = ($visibility == 'all') ? null : $request->input('users');
-    
-            DownloadFile::create(['path' => $path, 'user_id' => $user_id, 'visibility' => $visibility]);
-    
-            return redirect()->route('downloads')->with('success', 'File has been uploaded successfully');
+            $user_id = ($visibility == 'all') ? Auth::user()->id : $request->input('users');
+            $fileName = $file->getClientOriginalName();
+
+            DownloadFile::create(['path' => $path, 'fileName'=>$fileName, 'user_id' => $user_id, 'visibility' => $visibility]);
+
+            return redirect()->route('download')->with('success', 'File has been uploaded successfully');
         }
 
-        return redirect()->route('downloads')->with('error', 'File cannot be uploaded due to missing authorization.');
+        return redirect()->route('download')->with('error', 'File cannot be uploaded due to missing authorization.');
     }
 
 }

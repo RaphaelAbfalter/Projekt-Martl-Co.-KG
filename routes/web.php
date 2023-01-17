@@ -45,8 +45,9 @@ Route::put('newsletter/{id}', [NewsletterController::class, 'update'])->name('ne
 
 //DOWNLOADS
 Route::get('/downloads', 'FileController@index')->name('download');
-Route::get('/downloads/{file}', 'FileController@download')->name('download');
+Route::get('/downloads/{id}', 'FileController@download')->name('download.file');
 Route::post('/downloads', 'FileController@upload')->name('upload');
+
 
 
 //VIDEO

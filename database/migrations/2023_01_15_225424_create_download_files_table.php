@@ -14,6 +14,8 @@ class CreateDownloadFilesTable extends Migration
     public function up()
     {
         Schema::create('download_files', function (Blueprint $table) {
+            $table->id();
+            $table->string('fileName');
             $table->string('path');
             $table->unsignedBigInteger('user_id');
             $table->enum('visibility', ['all', 'specific'])->default('all');

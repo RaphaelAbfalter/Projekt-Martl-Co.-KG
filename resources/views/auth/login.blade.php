@@ -1,7 +1,7 @@
 @extends('dashboard')
 @section('content')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style_login.css')}}" >
-<main>
+<main class="form-container">
                 <div class="col-md-4">
                     <div class="card">
                         <h3 class="card-header text-center">Anmelden</h3>

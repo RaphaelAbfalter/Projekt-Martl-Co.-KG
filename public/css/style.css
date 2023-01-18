@@ -45,6 +45,9 @@ body{
     flex-direction: column;
     height: auto;
 }
+main{
+    height: auto;
+}
 footer{
     justify-self: flex-end;
 }

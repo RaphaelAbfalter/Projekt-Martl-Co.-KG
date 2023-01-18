@@ -1,8 +1,7 @@
 @extends('dashboard')
 @section('content')
-    <div class="login-form">
-        <div class="cotainer">
-            <div class="row justify-content-center">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style_login.css')}}" >
+<main>
                 <div class="col-md-4">
                     <div class="card">
                         <h3 class="card-header text-center">Anmelden</h3>
@@ -36,7 +35,5 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+</main>
 @endsection

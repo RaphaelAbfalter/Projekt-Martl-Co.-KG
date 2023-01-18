@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ImpressumController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\SubscriberController;
@@ -27,7 +28,7 @@ Route::get('/index/alternate', function () {
 
 //CONTACT
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
-Route::post('contact', [ContactController::class, 'send'])->name('contact.send');
+Route::post('contact', [ContactController::class, 'create'])->name('contact.create');
 
 //LOGIN AND REGISTRATION
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
@@ -35,7 +36,7 @@ Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
-Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+Route::get('index', [CustomAuthController::class, 'signOut'])->name('signout');
 
 //NEWSLETTER
 Route::get('newsletter', [NewsletterController:: class, 'index'])->name('newsletter');
@@ -48,13 +49,14 @@ Route::put('newsletter/{id}', [NewsletterController::class, 'update'])->name('ne
 
 //DOWNLOADS
 Route::get('/downloads', 'FileController@index')->name('download');
-Route::get('/downloads/{file}', 'FileController@download')->name('download');
+Route::get('/downloads/{id}', 'FileController@download')->name('download.file');
 Route::post('/downloads', 'FileController@upload')->name('upload');
 
 
+
 //VIDEO
-Route::get('/videos', function () {
-    return view('videos');
+Route::get('/video', function () {
+    return view('video');
 });
 
 //PROJEKTMANAGEMENT
@@ -66,3 +68,9 @@ Route::get('/projektmanagement', function () {
 Route::get('/anfahrtsplan', [AnfahrtsplanController::class, 'show'])->name('anfahrtsplan');
 Route::get('/anfahrtsplan_edit', [AnfahrtsplanController::class, 'edit'])->name('anfahrtsplan_edit');
 Route::put('/anfahrtsplan', [AnfahrtsplanController::class, 'update'])->name('anfahrtsplan_update');
+
+
+//IMPRESSUM
+Route::get('/impressum', [ImpressumController::class, 'show'])->name('impressum');
+Route::get('/impressum_edit', [ImpressumController::class, 'edit'])->name('impressum_edit');
+Route::put('/impressum', [ImpressumController::class, 'update'])->name('impressum.update');

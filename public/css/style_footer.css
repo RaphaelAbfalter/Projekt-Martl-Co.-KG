@@ -2,15 +2,17 @@ footer{
     display: flex;
     flex-direction: row;
     height: 7rem;
-    justify-content: space-between;
-    align-items: baseline;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--secondary-color);
 }
-footer>span:nth-child(1)>img,
-footer>span:nth-child(1){
-    height: inherit;
-}
+
+footer>span:nth-child(1),
 footer>span:nth-child(3){
-    width: 7rem;
+    width: 4rem;
 }
+footer>span>img{
+    width: inherit;
+}
+
 footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • '; }

@@ -1,10 +1,12 @@
 @extends('dashboard')
 @section('content')
-<main>
-    <div>
+<main class="container-video">
+	<section class="video-section">
 		<h2>AOI-Roboterzelle mit Verkettung</h2>
 		<video controls muted loop preload>
-			<source src="./videos/roboter1.mp4" type="video/mp4">
+			<source src="U:\PP\public\Videos\roboter1.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+			Videoeinbindung wird in Ihrem Browser nicht unterstützt.
 		</video>
 		<ul>
 			<li>Löten von Elektronikbauteilen</li>
@@ -15,10 +17,13 @@
 			<li>Datenerfassung von Kameramesswerten und Ablage in Datenbanken</li>
 			<li>Erfassung Lötdaten mittels RFID-System</li>
 		</ul>
-
+	</section>
+	<section class="video-section">
 		<h2>Roboterhandlingsgerät für Ferritkerne</h2>
 		<video controls muted loop preload>
-			<source src="./videos/roboter2.mp4" type="video/mp4"></source>
+			<source src="U:\PP\public\Videos\roboter2.mp4" type="video/mp4"></source>
+			Your browser does not support the video tag.
+			Videoeinbindung wird in Ihrem Browser nicht unterstützt.
 		</video>
 		<ul>
 			<li>Abnahme von Ferritkernen aus Presse</li>
@@ -27,6 +32,6 @@
 			<li>Einbringen eines Trennmittels</li>
 			<li>Pufferung der Sinterschalen in einem Paternoster-Lagerregal für eine hohe Autonomiezeit</li>
 		</ul>
-	</div>
+	</section>
 </main>
 @endsection

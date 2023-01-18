@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/index/alternate', function () {
+    return view('index_alternate');
+});
+
 //CONTACT
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact', [ContactController::class, 'send'])->name('contact.send');

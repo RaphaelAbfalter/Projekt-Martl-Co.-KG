@@ -1,0 +1,128 @@
+body{
+    background-color: #cfcfcf;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.scrollable{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+
+.startpage-header{
+    background-color: #1f1f1f;
+}
+
+.startpage-header > *{
+    color: #f1f1f1;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.headerpics{
+    align-self: center;
+    padding: 10px;
+}
+
+.headerpics > *{
+    width: 45vw;
+    height: auto;
+    border-radius: 35px;
+    align-self: center;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.hp1{
+    transform: rotate(-3deg);
+}
+.hp2{
+    transform: rotate(3deg);
+}
+
+h1, h2{
+    text-align: center;
+}
+
+* {box-sizing:border-box}
+
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 80vw;
+  position: relative;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.mySlides1, .mySlides2{
+    border-radius: 35px;
+    align-self: center;
+    background-color: #f1f1f1;
+}
+
+.slide-content-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.slide-content-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.slide-content-row	> * , .slide-content-col	> * {
+    border-radius: 35px;
+    padding: 25px;
+}
+
+.slide-content-row > .img-text-row {
+    width: 50%;
+    height: auto;
+}
+
+.slide-content-col > .img-text-col {
+    width: 100%;
+    height: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}

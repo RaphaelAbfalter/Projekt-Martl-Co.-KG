@@ -1,7 +1,7 @@
 @extends('dashboard')
 @section('content')
-<main> 
-	<div>
+<main>
+    <div>
 		<h2>AOI-Roboterzelle mit Verkettung</h2>
 		<video controls muted loop preload>
 			<source src="./videos/roboter1.mp4" type="video/mp4">
@@ -27,11 +27,6 @@
 			<li>Einbringen eines Trennmittels</li>
 			<li>Pufferung der Sinterschalen in einem Paternoster-Lagerregal für eine hohe Autonomiezeit</li>
 		</ul>
-	</div>
-	<div>
-		<footer>
-			<p>*Footer* Kontakt - Anfahrt - News - Impressum *Footer*</p>
-		</footer>
 	</div>
 </main>
 @endsection

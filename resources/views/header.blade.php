@@ -13,7 +13,7 @@
                         <span class="dropdown">
                              <button id="dropdownButton" class="dropdown-button nav-button" data-dropdown="dropdown">Admin</button>
                              <span class="dropdown-content" data-dropdown="dropdown">
-                                    <a href="{{ URL('/video') }}">Kontakt</a>
+                                    <a href="{{ URL('/contactShow') }}">Kontakt</a>
                                     <a href="{{ URL('/newsletter') }}">Newsletter</a>
                                     <a href="{{ URL('downloads') }}">Kunden erstellen</a>
                              </span>

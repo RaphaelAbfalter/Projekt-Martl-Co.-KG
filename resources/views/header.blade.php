@@ -9,17 +9,26 @@
               <a href="{{ URL('contact') }}">Kontakt</a>
 
               @if(isset(Auth::user()['admin']))
-                <a href="">Admin</a>
+                   @if(Auth::user()['admin'])
+                        <span class="dropdown">
+                             <button id="dropdownButton" class="dropdown-button nav-button" data-dropdown="dropdown">Admin</button>
+                             <span class="dropdown-content" data-dropdown="dropdown">
+                                    <a href="{{ URL('/video') }}">Kontakt</a>
+                                    <a href="{{ URL('/newsletter') }}">Newsletter</a>
+                                    <a href="{{ URL('downloads') }}">Kunden erstellen</a>
+                             </span>
+                        </span>
+                   @endif
                @endif
 
               <span class="dropdown">
                      <button id="dropdownButton" class="dropdown-button nav-button" data-dropdown="dropdown">Unternehmen</button>
                      <span class="dropdown-content" data-dropdown="dropdown">
-                            <a href="/video">Videos</a>
-                            <a href="/newsletter">Newsletter</a>
-                            <a href="/downloads">Downloads</a>
-                            <a href="/anfahrtsplan">Anfahrt</a>
-                            <a href="/impressum">Impressum</a>
+                            <a href="{{ URL('/video') }}">Videos</a>
+                            <a href="{{ URL('/newsletter') }}">Newsletter</a>
+                            <a href="{{ URL('downloads') }}">Downloads</a>
+                            <a href="{{ URL('anfahrtsplan') }}">Anfahrt</a>
+                            <a href="{{ URL('impressum') }}">Impressum</a>
                      </span>
               </span>
               @guest

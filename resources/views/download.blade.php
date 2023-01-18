@@ -31,7 +31,7 @@
                     <label for="users">Select specific users:</label>
                     <select id="users" name="users[]" multiple>
                         @foreach($users as $user)
-                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                            <option value="{{ $user->user_id }}">{{ $user->name }}</option>
                         @endforeach
                     </select>
                 </div>

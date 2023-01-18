@@ -22,12 +22,13 @@ class FileController extends Controller
 
     public function index()
     {
-        $files = DownloadFile::where('visibility', 'all')->orWhere(function ($query) {
-            $query->where('visibility', 'specific')->where('user_id', auth()->id());
-        })->get();
-
+        
         $isAdmin = Auth::user() && Auth::user()->admin;
         $users = User::all();
+
+        $files = ($isAdmin) ? DownloadFile::all() : DownloadFile::where('visibility', 'all')->orWhere(function ($query) {
+            $query->where('visibility', 'specific')->where('user_id', auth()->id());
+        })->get();
        
         if($files->count() > 0)
         {
@@ -46,9 +47,11 @@ class FileController extends Controller
             $file = $request->file('file');
             $path = Storage::putFile('public/files', $file);
             $visibility = $request->input('access_level');
-            $user_id = ($visibility == 'all') ? Auth::user()->id : $request->input('users');
-            $fileName = $file->getClientOriginalName();
 
+
+            $user_id = ($visibility == 'all') ? Auth::user()->id : $request->input('users')[0];
+            $fileName = $file->getClientOriginalName();
+            
             DownloadFile::create(['path' => $path, 'fileName'=>$fileName, 'user_id' => $user_id, 'visibility' => $visibility]);
 
             return redirect()->route('download')->with('success', 'File has been uploaded successfully');

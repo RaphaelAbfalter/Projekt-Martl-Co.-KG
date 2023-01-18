@@ -52,7 +52,8 @@ Route::post('/downloads', 'FileController@upload')->name('upload');
 
 //VIDEO
 Route::get('/videos', function () {
-    return view('videos');
+    echo'test';
+    //return view('videos');
 });
 
 //PROJEKTMANAGEMENT

@@ -8,7 +8,7 @@
               <a href="{{ URL('projektmanagement') }}">Projektmanagement</a>
               <a href="{{ URL('contact') }}">Kontakt</a>
 
-              @if(Auth::user()['admin'])
+              @if(isset(Auth::user()['admin']))
                 <a href="">Admin</a>
                @endif
 

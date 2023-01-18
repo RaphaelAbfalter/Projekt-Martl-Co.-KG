@@ -89,6 +89,27 @@ class NewsletterController extends Controller
         }
     }
 
+    public function sendNewsletter(Request $request)
+    {
+        $user = Auth::user();
+
+        $request->validate([
+            'message'    => 'required',
+            'subject'    => 'required'
+        ]);
+
+        if($user)
+        {
+            if($user->admin)
+            {
+                foreach(Newsletter::all() as $users)
+                {
+                    mail($users->mail['email'], $request['subject'], $request['message']);
+                }
+            }
+        }
+    }
+
     public function destroy($id)
     {
         $user = Auth::user();

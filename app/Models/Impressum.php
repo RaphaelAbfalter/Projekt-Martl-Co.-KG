@@ -9,6 +9,6 @@ class Impressum extends Model
     protected $table = 'impressum';
     protected $fillable = [
         'firmenanschrift', 'unternehmensgegenstand', 'UIDNummer',
-        'GLA', 'GISA', 'telefonnummer', 'fax', 'email', 'adresse',
+        'GLN', 'GISA', 'telefonnummer', 'fax', 'email', 'adresse',
     ];
 }

@@ -46,7 +46,7 @@ class ImpressumController extends Controller
                 $texts->firmenanschrift = $request->firmenanschrift;
                 $texts->unternehmensgegenstand = $request->unternehmensgegenstand;
                 $texts->UIDNummer = $request->UIDNummer;
-                $texts->GLA = $request->GLA;
+                $texts->GLN = $request->GLN;
                 $texts->GISA = $request->GISA;
                 $texts->telefonnummer = $request->telefonnummer;
                 $texts->fax = $request->fax;

@@ -5,7 +5,7 @@
         @csrf
         @method('PUT')
         <label for="firmenadresse">Firmensitz Adresse:</label>
-        <textarea name="firmenadresse" id="firmenadresse">{{ $texts->firmenadresse }}</textarea>
+        <textarea name="firmenanschrift" id="firmenanschrift">{{ $texts->firmenanschrift }}</textarea>
         <br>
         <label for="unternehmensgegenstand">Unternehmensgegenstand:</label>
         <textarea name="unternehmensgegenstand" id="unternehmensgegenstand">{{ $texts->unternehmensgegenstand }}</textarea>
@@ -14,7 +14,7 @@
         <textarea name="UIDNummer" id="UIDNummer">{{ $texts->UIDNummer }}</textarea>
         <br>
         <label for="GLA">GLA:</label>
-        <textarea name="GLA" id="GLA">{{ $texts->GLA }}</textarea>
+        <textarea name="GLN" id="GLN">{{ $texts->GLN }}</textarea>
         <br>
         <label for="GISA">GISA:</label>
         <textarea name="GISA" id="GISA">{{ $texts->GISA }}</textarea>
@@ -26,7 +26,7 @@
         <textarea name="fax" id="fax">{{ $texts->fax }}</textarea>
         <br>
         <label for="email">E-Mail:</label>
-        <textarea name="fax" id="fax">{{ $texts->fax }}</textarea>
+        <textarea name="email" id="email">{{ $texts->email }}</textarea>
         <br>
         <label for="adresse">Adresse:</label>
         <textarea name="adresse" id="adresse">{{ $texts->adresse }}</textarea>

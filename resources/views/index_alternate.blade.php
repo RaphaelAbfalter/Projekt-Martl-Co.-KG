@@ -1,9 +1,9 @@
-<!Doctype html>
-<html lang="de">
+@extends('dashboard')
+@section('content')
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="{{ URL::asset('css\index_alternate.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/style_index.css')}}" >
+        <link rel="stylesheet" href="{{ URL::asset('css/style_index_alternate.css') }}">
         <title>
           Alternate Startpage
         </title>
@@ -30,15 +30,14 @@
         </script>        
     </head>
     <body>
-    @include('header')
         <div class="startpage-header">
             <h1>WILLKOMMEN BEI MARTL & CO. KG <br> AUTOMATISIERUNGSTECHNIK - KONSTRUKTION – MASCHINENBAU</h1>
         </div>
 
         <div class="scrollable">
             <div class="headerpics">
-                <img class="hp1" src="../../../../WebDev/martl_cokg.png">
-                <img class="hp2" src="../../../../WebDev/Endmessdrehteller.jpg">
+                <img src="../assets/martl_cokg.png" alt="Martl & CO. KG Gebäude">
+                <img src="../assets/Endmessdrehteller.jpg" alt="Endmessdrehteller">
             </div>
 
             <h2>KONSTRUKTION - PLANUNG – ENTWICKLUNG</h2>
@@ -46,7 +45,7 @@
             <div class="slideshow-container">
                 <div class="mySlides1">
                   <div class="slide-content-row">
-                    <img class="img-text-row" src="Mechanische_Konstruktion.png">
+                    <img class="img-text-row" src="../assets/Mechanische_Konstruktion.png" alt="Mechanische Konstruktion">
                     <a>
                       <h4>
                         Mechanische Konstruktion
@@ -72,7 +71,7 @@
                         magnam ipsa nemo excepturi esse ipsum alias, inventore eius.<br>
                       </P>
                     </a>
-                    <img class="img-text-col" src="Vision_Systeme.png">
+                    <img class="img-text-col" src="../assets/Vision_Systeme.png" alt="Vision Systeme">
                   </div>
                 </div>
                   <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
@@ -94,13 +93,13 @@
                         magnam ipsa nemo excepturi esse ipsum alias, inventore eius.<br>
                       </P>
                     </a>
-                    <img class="img-text-row" src="Widerstandsschweissroboter.jpg">
+                    <img class="img-text-row" src="../assets/Widerstandsschweissroboter.jpg" alt="Widerstandsschweissroboter">
                   </div>
                 </div>
               
                 <div class="mySlides2">
                   <div class="slide-content-row">
-                    <img class="img-text-row" src="Laserschweissdrehteller.jpg">
+                    <img class="img-text-row" src="../assets/Endmessdrehteller.jpg" alt="Endmessdrehteller">
                     <a>
                       <h4>
                         Laserschweissdrehteller
@@ -118,6 +117,5 @@
                 <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
             </div>
         </div>
-        @include('footer')
     </body>
-</html>
+@endsection

@@ -22,7 +22,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/index/alternate', function () {
+Route::get('/alternate', function () {
     return view('index_alternate');
 });
 

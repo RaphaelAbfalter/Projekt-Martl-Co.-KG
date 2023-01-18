@@ -1,5 +1,5 @@
 body{
-    background-color: #cfcfcf;
+    background-color: #f1f1f1;
     background-repeat: no-repeat;
     background-size: 100vw;
     
@@ -10,6 +10,8 @@ body{
 }
 
 .scrollable{
+    background-image: url("../public/assets/martl_cokg.png");
+    background: fixed;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -33,18 +35,11 @@ body{
 
 .headerpics > *{
     width: 45vw;
-    height: auto;
-    border-radius: 35px;
+    height: 45vh;
+    border-radius: 25px;
     align-self: center;
-    padding: 25px;
+    padding: 15px;
     margin-bottom: 20px;
-}
-
-.hp1{
-    transform: rotate(-3deg);
-}
-.hp2{
-    transform: rotate(3deg);
 }
 
 h1, h2{
@@ -69,7 +64,7 @@ img {vertical-align: middle;}
 .mySlides1, .mySlides2{
     border-radius: 35px;
     align-self: center;
-    background-color: #f1f1f1;
+    background-color: #e2e2e2;
 }
 
 .slide-content-row{

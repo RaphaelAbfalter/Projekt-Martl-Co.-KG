@@ -1,12 +1,17 @@
 <header>
        <nav>
-       <a href="">
+       <a href="{{ URL('/') }}">
               <img src="./assets/LOGO_Martl&Co.KG.svg">
        </a>
        <span>
-              <a href="/">Startseite</a>
-              <a href="/projektmanagement">Projektmanagement</a>
-              <a href="/contact">Kontakt</a>
+              <a href="{{ URL('/') }}">Startseite</a>
+              <a href="{{ URL('projektmanagement') }}">Projektmanagement</a>
+              <a href="{{ URL('contact') }}">Kontakt</a>
+
+              @if(Auth::user()['admin'])
+                <a href="">Admin</a>
+               @endif
+
               <span class="dropdown">
                      <button id="dropdownButton" class="dropdown-button nav-button" data-dropdown="dropdown">Unternehmen</button>
                      <span class="dropdown-content" data-dropdown="dropdown">
@@ -18,8 +23,8 @@
                      </span>
               </span>
               @guest
-              <a href="/registration" class="nav-button">Registrieren</a>
-              <a href="/login" class="nav-button">Login</a>
+              <a href="{{ route('register-user') }}" class="nav-button">Registrieren</a>
+              <a href="{{ route('login') }}" class="nav-button">Login</a>
               @else
               <a href="{{ route('signout')}}" class="nav-button">Sign Out</a>
               @endguest

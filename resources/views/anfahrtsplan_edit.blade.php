@@ -1,5 +1,6 @@
 @extends('dashboard')
 @section('content')
+<main>
     <h1>Edit Anfahrtsplan</h1>
     <form action="{{ route('anfahrtsplan_update') }}" method="post">
         @csrf
@@ -24,4 +25,5 @@
         <br>
         <input type="submit" value="Save Changes">
     </form>
+</main>
 @endsection

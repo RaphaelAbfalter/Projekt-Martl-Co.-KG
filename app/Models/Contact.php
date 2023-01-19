@@ -19,5 +19,6 @@ class Contact extends Authenticatable
         'name',
         'email',
         'message',
+        'created_at'
     ];
 }

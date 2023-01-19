@@ -420,7 +420,6 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
 
 /* KONTAKT */
 #dialog{
-    width:auto;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -428,7 +427,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     padding:2rem;
     border: 0;
     border-radius: 2rem;
-    box-shadow: 0 0 20rem 20rem var(--secondary-color);
+    box-shadow: 0 0 20rem 0 var(--secondary-color);
 }
 
 /* ANIMATIONS */

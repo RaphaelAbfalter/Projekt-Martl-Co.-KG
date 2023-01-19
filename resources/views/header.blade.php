@@ -6,7 +6,6 @@
                             <img src="./assets/LOGO_Martl&Co.KG.svg">
                      </a>
               </span>
-              
               <span>
                      <a href="{{ URL('/') }}">Startseite</a>
                      <a href="{{ URL('projektmanagement') }}">Projektmanagement</a>

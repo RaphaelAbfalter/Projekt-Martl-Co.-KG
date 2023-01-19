@@ -2,14 +2,29 @@ nav{
     display: flex;
     flex-direction: row;
     height: 5rem;
-    align-items:baseline;
+    align-items:center;
     background-color: var(--secondary-color);
 }
-nav>a>img,
-nav>a{
+.logo>img,
+.logo{
     height: inherit;
+    margin: 0;
+    box-shadow: 0 0 0.2rem -0.1rem #1f1f1f;
 }
-nav>img{
+#stickyBar{
+    display:flex;
+    height: 5rem;
+    transition: height 0.2s, width 1s cubic-bezier(.19,.77,.24,.91);
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 20;
+    width:0;
+    margin:0;
+    background-color: #FA1112a0;
+    align-content: center;
+}
+.logo>img{
     aspect-ratio: auto;
 }
 nav>span{
@@ -22,24 +37,31 @@ nav>span>a{
     position: absolute;
     display:none;
     flex-direction: column;
-    top: 0;
-    left:0.8rem;
+    bottom: 1;
+    left:0;
     text-align: left;
     background-color: var(--main-color);
     border: solid 1px var(--main-theme);
     text-decoration: none;
-    padding: 3rem 0.5rem 1rem 0.5rem;
-    z-index: 0;
-    border-radius: 0.2rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    z-index: 2;
+    border-radius: 0 0.8rem 0.8rem 0.8rem;
+    width: max-content;
+}
+.dropdown-content>a:before{
+    content: "| ";
 }
 .dropdown-button{
     position: relative;
-    z-index: 1;
+    z-index: 3;
+}
+.dropdown-button{
+    border-bottom-left-radius: 0;
 }
 .nav-button{
     border-radius: 0.8rem;
     transition: all 0.2s;
-    color: var(--main-color);
+    color: var(--text-color);
     background-color: var(--main-theme);
     padding: 0.8rem;
 }

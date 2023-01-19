@@ -25,14 +25,24 @@
 body{
     background-color:var(--main-color);
 }
-h1,p, a, a:hover{
+div, table{
+    background-color: var(--secondary-color);
+}
+h1, h2, h3, h4, h5, h6, p, a, a:hover, ul, label{
     color: var(--text-color);
 }
-a, button{
+input[type="submit"]{
+    background-color: var(--main-theme);
+}
+a, button, input[type="submit"]{
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
     border: none;
+}
+input[type="submit"]:hover{
+    background-color: var(--text-color);
+    color:var(--main-color);
 }
 a:hover{
     text-decoration: underline;
@@ -40,11 +50,12 @@ a:hover{
 path{
     stroke: var(--text-color);
 }
-body{
-    display:flex;
-    flex-direction: column;
-    height: auto;
+
+::-webkit-scrollbar{
+    background-color: var(--secondary-color);
+    width: 0.5rem;
 }
-footer{
-    justify-self: flex-end;
+::-webkit-scrollbar-thumb{
+    border-radius: 0.2rem;
+    background-color: var(--main-color);
 }

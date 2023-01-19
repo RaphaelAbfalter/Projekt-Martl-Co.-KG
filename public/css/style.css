@@ -23,10 +23,10 @@
         --text-color:#1f1f1f;
     }
 }
-body{
+body, div, form, dialog{
     background-color:var(--main-color);
 }
-div, table{
+table{
     background-color: var(--secondary-color);
 }
 h1, h2, h3, h4, h5, h6, p, a, a:hover, ul, label{
@@ -411,9 +411,32 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     padding: 1rem 1rem;
 }
 /* LOGIN / REGISTER / KONTAKT */
+
+
+
 /* LOGIN */
 
 /* REGISTER */
 
 /* KONTAKT */
+#dialog{
+    width:auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:2rem;
+    border: 0;
+    border-radius: 2rem;
+    box-shadow: 0 0 20rem 20rem var(--secondary-color);
+}
 
+/* ANIMATIONS */
+@keyframes fade{
+    from {
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }

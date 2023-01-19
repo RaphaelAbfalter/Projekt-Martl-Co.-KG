@@ -65,6 +65,6 @@ class ContactController extends Controller
             'message' => $request['message']
         ]);
 
-        return Redirect('dashboard');
+        return Redirect('/');
     }
 }

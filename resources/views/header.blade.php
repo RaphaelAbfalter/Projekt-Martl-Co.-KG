@@ -9,7 +9,7 @@
               <span>
                      <a href="{{ URL('/') }}">Startseite</a>
                      <a href="{{ URL('projektmanagement') }}">Projektmanagement</a>
-                     <a href="{{ URL('contact') }}">Kontakt</a>
+                     <button id="dialogButton" class="nav-button">Kontakt</button>
               <span class="dropdown">
                      <button id="dropdownButton" class="dropdown-button nav-button" data-dropdown="unternehmen">Unternehmen</button>
                      <span class="dropdown-content" data-dropdown="unternehmen">

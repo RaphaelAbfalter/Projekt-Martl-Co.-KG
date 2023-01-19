@@ -21,6 +21,8 @@
        <link rel="stylesheet" type="text/css" href="{{ asset('css/style_header.css')}}" >
        <!-- main logic -->
        <script defer type="text/javascript" src="{{asset('js/main.js')}}"></script>
+       <!-- dialog logic -->
+       <script defer type="text/javascript" src="{{asset('js/dialog.js')}}"></script>
         <!-- custom stylesheet -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style_footer.css')}}" >
         <!-- custom stylesheet -->
@@ -28,6 +30,9 @@
     <body>
         @include('header')
         @yield('content')
+        <dialog id="dialog">
+        @include('contact')
+        </dialog>
         @include('footer')
     </body>
 </html>

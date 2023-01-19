@@ -12,20 +12,6 @@
                      <a href="{{ URL('/') }}">Startseite</a>
                      <a href="{{ URL('projektmanagement') }}">Projektmanagement</a>
                      <a href="{{ URL('contact') }}">Kontakt</a>
-
-              @if(isset(Auth::user()['admin']))
-                   @if(Auth::user()['admin'])
-                        <span class="dropdown">
-                             <button id="dropdownButton" class="dropdown-button nav-button" data-dropdown="admin">Admin</button>
-                             <span class="dropdown-content" data-dropdown="admin">
-                                    <a href="{{ URL('/contactShow') }}">Kontakt</a>
-                                    <a href="{{ URL('/newsletter') }}">Newsletter</a>
-                                    <a href="{{ URL('downloads') }}">Kunden erstellen</a>
-                             </span>
-                        </span>
-                   @endif
-               @endif
-
               <span class="dropdown">
                      <button id="dropdownButton" class="dropdown-button nav-button" data-dropdown="unternehmen">Unternehmen</button>
                      <span class="dropdown-content" data-dropdown="unternehmen">
@@ -36,8 +22,19 @@
                             <a href="{{ URL('impressum') }}">Impressum</a>
                      </span>
               </span>
+              @if(isset(Auth::user()['admin']))
+                   @if(Auth::user()['admin'])
+                        <span class="dropdown">
+                             <button id="dropdownButton" class="dropdown-button nav-button" data-dropdown="admin">Admin</button>
+                             <span class="dropdown-content" data-dropdown="admin">
+                                    <a href="{{ URL('/contactShow') }}">Kontakt</a>
+                                    <a href="{{ URL('/newsletter') }}">Newsletter</a>
+                                    <a href="{{ route('register-user') }}">Kunden erstellen</a>
+                             </span>
+                        </span>
+                   @endif
+               @endif
               @guest
-              <a href="{{ route('register-user') }}" class="nav-button">Registrieren</a>
               <a href="{{ route('login') }}" class="nav-button">Login</a>
               @else
               <a href="{{ route('signout')}}" class="nav-button">Sign Out</a>

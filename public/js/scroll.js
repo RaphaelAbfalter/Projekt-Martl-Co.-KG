@@ -1,7 +1,6 @@
 function sticky(){
     const nav = document.querySelector("nav");
     const stickyBar = document.getElementById("stickyBar");
-    console.log(stickyBar)
     let rect = nav.getBoundingClientRect();
     if(rect.top <= -80){
         stickyBar.style.height="2.5rem";

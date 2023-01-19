@@ -18,4 +18,4 @@ dialogButtons.forEach(dialogButton=>{
             }
         });
     });
-})
+});

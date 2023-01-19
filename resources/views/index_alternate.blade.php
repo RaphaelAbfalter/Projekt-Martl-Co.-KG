@@ -7,37 +7,22 @@
         <title>
           Alternate Startpage
         </title>
-        <script>
-            let slideIndex = [1,1];
-            let slideId = ["mySlides1", "mySlides2"]
-            showSlides(1, 0);
-            showSlides(1, 1);
-            
-            function plusSlides(n, no) {
-              showSlides(slideIndex[no] += n, no);
-            }
-            
-            function showSlides(n, no) {
-              let i;
-              let x = document.getElementsByClassName(slideId[no]);
-              if (n > x.length) {slideIndex[no] = 1}    
-              if (n < 1) {slideIndex[no] = x.length}
-              for (i = 0; i < x.length; i++) {
-                 x[i].style.display = "none";  
-              }
-              x[slideIndex[no]-1].style.display = "block";  
-            }
-        </script>        
+        <script src="{{ URL::asset('js/index_alternate.js')}}"></script>        
     </head>
     <body>
+    <div class="scrollable">
         <div class="startpage-header">
             <h1>WILLKOMMEN BEI MARTL & CO. KG <br> AUTOMATISIERUNGSTECHNIK - KONSTRUKTION – MASCHINENBAU</h1>
         </div>
 
-        <div class="scrollable">
+        
             <div class="headerpics">
-                <img src="../assets/martl_cokg.png" alt="Martl & CO. KG Gebäude">
-                <img src="../assets/Endmessdrehteller.jpg" alt="Endmessdrehteller">
+              <a href="/anfahrtsplan">
+                <img id="imgA" class="img-top" src="../assets/martl_cokg.png" alt="Martl & CO. KG Gebäude">
+              </a>
+              <a>
+                <img id="imgB" class="img-bottom" src="../assets/Endmessdrehteller.jpg" alt="Endmessdrehteller">
+              </a>
             </div>
 
             <h2>KONSTRUKTION - PLANUNG – ENTWICKLUNG</h2>

@@ -24,12 +24,6 @@ nav{
     background-color: #FA1112a0;
     align-content: center;
 }
-#stickyBar>marquee{
-    color: #F1F1F1;
-    font-weight: 500;
-    align-self: center;
-    text-shadow: 0 0 2px #1f1f1f;
-}
 .logo>img{
     aspect-ratio: auto;
 }

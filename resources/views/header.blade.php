@@ -5,7 +5,6 @@
                      <a href="{{ URL('/') }}" class="logo">
                             <img src="./assets/LOGO_Martl&Co.KG.svg">
                      </a>
-                     <marquee><span>Willkommen bei Martl & Co. KG</span></marquee>
               </span>
               
               <span>

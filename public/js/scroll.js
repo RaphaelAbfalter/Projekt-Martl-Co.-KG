@@ -1,4 +1,4 @@
-document.addEventListener("scroll", function(){
+function sticky(){
     const nav = document.querySelector("nav");
     const stickyBar = document.getElementById("stickyBar");
     console.log(stickyBar)
@@ -11,4 +11,10 @@ document.addEventListener("scroll", function(){
         stickyBar.style.height="";
         stickyBar.style.width=0;
     }
+}
+document.addEventListener("scroll", function(){
+    sticky();
+})
+document.addEventListener("load", function(){
+    sticky();
 })

@@ -1,12 +1,17 @@
+<script defer type="text/javascript" src="{{asset('js/scroll.js')}}"></script>
 <header>
        <nav>
-       <a href="{{ URL('/') }}">
-              <img src="./assets/LOGO_Martl&Co.KG.svg">
-       </a>
-       <span>
-              <a href="{{ URL('/') }}">Startseite</a>
-              <a href="{{ URL('projektmanagement') }}">Projektmanagement</a>
-              <a href="{{ URL('contact') }}">Kontakt</a>
+              <span id="stickyBar">
+                     <a href="{{ URL('/') }}" class="logo">
+                            <img src="./assets/LOGO_Martl&Co.KG.svg">
+                     </a>
+                     <marquee><span>Willkommen bei Martl & Co. KG</span></marquee>
+              </span>
+              
+              <span>
+                     <a href="{{ URL('/') }}">Startseite</a>
+                     <a href="{{ URL('projektmanagement') }}">Projektmanagement</a>
+                     <a href="{{ URL('contact') }}">Kontakt</a>
 
               @if(isset(Auth::user()['admin']))
                    @if(Auth::user()['admin'])

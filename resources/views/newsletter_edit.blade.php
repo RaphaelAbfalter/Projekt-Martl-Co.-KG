@@ -1,7 +1,6 @@
 @extends('dashboard')
 
 @section('content')
-    <nav>Navigation</nav>
     <h1>Edit Newsletter</h1>
     <form action="{{ route('newsletter.update', $newsletter->id) }}" method="post">
         @csrf

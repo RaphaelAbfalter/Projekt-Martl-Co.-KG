@@ -1,6 +1,5 @@
 @extends('dashboard')
 @section('content')
-<!-- custom stylesheet -->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/style_proj.css')}}">
 <main class="proj-container">
     <section class="mech-kons">

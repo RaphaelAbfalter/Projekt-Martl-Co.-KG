@@ -24,12 +24,14 @@
 /* carousel */
 .carousel{
     overflow:hidden;
-    height:25rem;
+    height:28rem;
     width:60%;
     margin:auto;
     display:flex;
     justify-content: space-between;
     background-color: var(--secondary-color);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1rem 0.5rem var(--secondary-color);
 }
 .slide{
     display:grid;
@@ -65,19 +67,30 @@
 .hero>h1{
     color: #f2f2f2;
     font-weight: 600;
-    z-index: 10;
+    z-index: 5;
     text-shadow: #000000 1px 0 10px
 }
 .arrow-left,.arrow-right{
-    width:4rem;
+    width:50%;
     height:100%;
     opacity:0.2;
     z-index:10;
     transition:all 0.3s;
     font-size: 2rem;
     color: var(--text-color);
+    padding: 2rem;
+    background-color: transparent; 
+}
+.arrow-left{
+    border-radius: 0.8rem 0 0 0.8rem;
+    text-align: left;
+    box-shadow: inset 30rem 0 25rem -25rem var(--secondary-color);
+}
+.arrow-right{
+    text-align: right;
+    box-shadow: inset -30rem 0 25rem -25rem var(--secondary-color);
+    border-radius: 0 0.8rem 0.8rem 0;
 }
 .arrow-left:hover,.arrow-right:hover{
     opacity:1;
-    background-color: var(--secondary-color);
 }

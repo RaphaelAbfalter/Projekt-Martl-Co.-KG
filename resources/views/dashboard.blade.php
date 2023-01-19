@@ -15,17 +15,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <!-- custom main stylesheet -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
-        <!-- custom stylesheet -->
-        <!-- carousel logic -->
-       <!-- custom stylesheet -->
-       <link rel="stylesheet" type="text/css" href="{{ asset('css/style_header.css')}}" >
        <!-- main logic -->
        <script defer type="text/javascript" src="{{asset('js/main.js')}}"></script>
        <!-- dialog logic -->
        <script defer type="text/javascript" src="{{asset('js/dialog.js')}}"></script>
-        <!-- custom stylesheet -->
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/style_footer.css')}}" >
-        <!-- custom stylesheet -->
     </head>
     <body>
         @include('header')

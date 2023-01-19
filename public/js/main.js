@@ -24,5 +24,19 @@ dropdownButton.forEach(b =>{
             targetDropdown.style.display="none";
             e.target.style.borderBottomLeftRadius="0.8rem";
         }
-    })
+    });
+});
+
+const csb = document.getElementById("csb");
+const csbSay = document.getElementById("csbSay");
+
+document.addEventListener("click", function(e){
+    if(e.target==csb&&csbSay.style.display=="block"||e.target!=csb&&csbSay.style.display=="block"){
+        csbSay.style.display="";
+        csb.removeAttribute("style");
+    }
+    else if(e.target==csb&&csbSay.style.display==""){
+        csbSay.style.display="block";
+        csb.style.transform="scale(2) translate(1rem, -1rem)";
+    }
 })

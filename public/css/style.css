@@ -32,18 +32,11 @@ table{
 h1, h2, h3, h4, h5, h6, p, a, a:hover, ul, label{
     color: var(--text-color);
 }
-input[type="submit"]{
-    background-color: var(--main-theme);
-}
 a, button, input[type="submit"]{
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
     border: none;
-}
-input[type="submit"]:hover{
-    background-color: var(--text-color);
-    color:var(--main-color);
 }
 a:hover{
     text-decoration: underline;
@@ -51,7 +44,6 @@ a:hover{
 path{
     stroke: var(--text-color);
 }
-
 ::-webkit-scrollbar{
     background-color: var(--secondary-color);
     width: 0.5rem;
@@ -60,7 +52,6 @@ path{
     border-radius: 0.2rem;
     background-color: var(--main-color);
 }
-
 /* HEADER */
 nav{
     display: flex;
@@ -149,10 +140,39 @@ footer>span:nth-child(3){
     width: 4rem;
 }
 footer>span>img{
+    position: relative;
     width: inherit;
+    transition: all 0.2s;
 }
-
 footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • '; }
+
+#csb:hover{
+    transform: scale(2) translate(1rem, -1rem);
+}
+#csbSay{
+    position: absolute;
+    left:6rem;
+    bottom: 6rem;
+    display: none;
+    padding: 0.4rem;
+    border-radius: 0.4rem 0.4rem 0.4rem 0;
+    border: 2px solid #027EDB;
+    z-index:9;
+    color: var(--text-color);
+    background-color: var(--main-color);
+}
+#csbSay>span{
+    white-space: nowrap;
+}
+#csbSay>span>a{
+    text-decoration: underline dashed #027EDB ;
+}
+#csbSay>span>a:hover{
+    text-decoration-style: solid;
+}
+.csb-contain{
+    position: relative;
+}
 /* INDEX */
 /* hero */
 .hero{
@@ -411,9 +431,16 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     padding: 1rem 1rem;
 }
 /* LOGIN / REGISTER / KONTAKT */
-
-
-
+label{
+    margin: 0.2rem;
+}
+input[type="submit"]{
+    background-color: var(--main-theme);
+}
+input[type="submit"]:hover{
+    background-color: var(--text-color);
+    color:var(--main-color);
+}
 /* LOGIN */
 
 /* REGISTER */
@@ -427,7 +454,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     padding:2rem;
     border: 0;
     border-radius: 2rem;
-    box-shadow: 0 0 20rem 0 var(--secondary-color);
+    box-shadow: 0 0 20rem 5rem var(--secondary-color);
 }
 
 /* ANIMATIONS */

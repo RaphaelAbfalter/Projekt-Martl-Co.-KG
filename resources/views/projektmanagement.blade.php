@@ -1,6 +1,6 @@
 @extends('dashboard')
 @section('content')
-<main class="proj-container">
+<main>
     <section class="mech-kons">
         <h1>Mechanische Konstruktion in Autodesk<br> 
         Inventor und Solidworks</h1>

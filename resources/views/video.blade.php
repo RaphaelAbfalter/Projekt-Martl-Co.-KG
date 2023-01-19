@@ -1,7 +1,6 @@
 @extends('dashboard')
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/style_video.css')}}" >
-<main class="container-video">
+<main class="content-container">
 	<section class="video-section">
 		<h2>AOI-Roboterzelle mit Verkettung</h2>
 		<video controls muted loop preload>

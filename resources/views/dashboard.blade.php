@@ -24,9 +24,9 @@
     <body>
         @include('header')
         @yield('content')
-        <dialog id="dialog">
-        @include('contact')
-        </dialog>
         @include('footer')
+        <dialog id="dialog">
+            @include('contact')
+        </dialog>
     </body>
 </html>

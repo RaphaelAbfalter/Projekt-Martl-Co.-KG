@@ -1,8 +1,7 @@
 @extends('dashboard')
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/style_index.css')}}" >
 <script defer type="text/javascript" src="{{asset('js/carousel.js')}}"></script>
-<main>
+<main class="index-container">
 <section class="hero">
     <img class="hero-img" src="./assets/martl_cokg.png" alt="Martl & CO. KG Gebäude"/>
     <h1>Willkommen bei Martl & CO. KG 

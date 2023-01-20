@@ -27,5 +27,8 @@ document.addEventListener("scroll", function(){
     stickyHeader();
     stickyFooter();
 })
+window.addEventListener("resize", function(){
+    stickyFooter();
+})
 stickyHeader();
 stickyFooter();

@@ -430,7 +430,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     grid-row:3;
 }
 /* VIDEO */
-.video-section, .newsletter-create, .contact-create{
+.video-section,.newsletter-create, .newsletter-create>form, .contact-create{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -471,12 +471,15 @@ input[type="submit"]:hover{
     width: 100%;
 }
 .textarea-design{
-    resize: none;
+    resize:both;
 }
-
 /* LOGIN */
 
+
+
 /* REGISTER */
+
+
 
 /* KONTAKT */
 #dialog{
@@ -488,17 +491,37 @@ input[type="submit"]:hover{
     border: 0;
     border-radius: 2rem;
     box-shadow: 0 0 20rem 5rem var(--secondary-color);
+    max-height:60%;
 }
-
 /* CONTACT VIEW */
+
+
 
 /* NEWSLETTER */
 .newsletter-create,
 .newsletter-article{
-    min-width: 50%;
+    width: 50%;
+    margin-right:0;
+}
+.newsletter-create>form{
+    width:100%;
+}
+.newsletter-create>form>input,
+.newsletter-create>form>textarea{
+    max-width: 50%;
 }
 .newsletter-article{
     text-align: left;
+    padding-top: 3rem;
+}
+.newsletter-article>.newsletter-content{
+    word-wrap: break-word;
+    text-indent: 1rem;
+}
+.newsletter-article-actions{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 /* ANFAHRT */

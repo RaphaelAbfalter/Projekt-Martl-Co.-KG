@@ -1,4 +1,4 @@
-
+<div>
 <h3>Kontakt</h3>
 <form action="{{ route('contact.create') }}" method="post" class="contact-create">
     @csrf
@@ -19,4 +19,4 @@
     @endif
     <button type="submit" class="style-button form-button">Absenden</button>
 </form>
-
+</div>

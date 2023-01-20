@@ -28,7 +28,8 @@
     <article class="newsletter-article">
         <h2>{{ $newsletter->title }}</h2>
         <p class="newsletter-content">{{ $newsletter->body }}</p>
-        <p>Published at: {{ $newsletter->created_at }}</p>
+        <hr>
+        <p class="newsletter-date">Published at: {{ $newsletter->created_at }}</p>
         @if ($showForm)
         <span class="newsletter-article-actions">
             <form action="{{ route('newsletter.destroy', $newsletter->id) }}" method="post">

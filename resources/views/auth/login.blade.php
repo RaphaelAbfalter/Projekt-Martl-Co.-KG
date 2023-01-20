@@ -1,39 +1,27 @@
 @extends('dashboard')
 @section('content')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/style_login.css')}}" >
-<main class="form-container">
-                <div class="col-md-4">
-                    <div class="card">
-                        <h3 class="card-header text-center">Anmelden</h3>
-                        <div class="card-body">
-                            <form method="POST" action="{{ route('login.custom') }}">
-                                @csrf
-                                <div class="form-group mb-3">
-                                    <input type="text" placeholder="E-Mail" id="email" class="form-control" name="email" required
-                                           autofocus>
-                                    @if ($errors->has('email'))
-                                        <span class="text-danger">{{ $errors->first('email') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group mb-3">
-                                    <input type="password" placeholder="Passwort" id="password" class="form-control" name="password" required>
-                                    @if ($errors->has('password'))
-                                        <span class="text-danger">{{ $errors->first('password') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group mb-3">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox" name="remember"> Remember Me
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="d-grid mx-auto">
-                                    <button type="submit" class="btn btn-dark btn-block">Anmelden</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+<main class="content-container">
+    <h1>Anmelden</h1>
+    <form method="POST" action="{{ route('login.custom') }}">
+        @csrf
+        <label for="email">E-Mail:</label>
+        <input type="text" placeholder="E-Mail" id="email"  class="input-design" name="email" required
+               autofocus>
+        @if ($errors->has('email'))
+            <span class="text-danger">{{ $errors->first('email') }}</span>
+        @endif
+        <label for="password">Passwort:</label>
+        <input type="password" placeholder="Passwort" id="password" class="input-design" name="password" required>
+        @if ($errors->has('password'))
+            <span class="text-danger">{{ $errors->first('password') }}</span>
+        @endif
+        <div class="checkbox">
+            <label for="check">
+                <input type="checkbox" id="check" name="remember">
+                Anmeldedaten speichern?
+            </label>
+        </div>
+        <button type="submit" class="style-button form-button">Anmelden</button>
+    </form>
 </main>
 @endsection

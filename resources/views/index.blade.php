@@ -3,7 +3,7 @@
 <script defer type="text/javascript" src="{{asset('js/carousel.js')}}"></script>
 <main class="index-container">
 <section class="hero">
-    <img class="hero-img" src="./assets/martl_cokg.png" alt="Martl & CO. KG Gebäude"/>
+    <img loading="lazy" class="hero-img" src="./assets/martl_cokg.png" alt="Martl & CO. KG Gebäude"/>
     <h1>Willkommen bei Martl & CO. KG 
         <br>
         Automatisierungstechnik - Konstruktion - Maschinenbau
@@ -16,15 +16,15 @@
         </button>
         <div class="slide">
             <p>Widerstandsschweißroboter</p>
-            <img src="./assets/Widerstandsschweissroboter.jpg" alt="Widerstandsschweissroboter"/>
+            <img loading="lazy" src="./assets/Widerstandsschweissroboter.jpg" alt="Widerstandsschweissroboter"/>
         </div>
         <div class="slide hidden">
             <p>Endmessdrehteller</p>
-            <img src="./assets/Endmessdrehteller.jpg" alt="Endmessdrehteller"/>
+            <img loading="lazy" src="./assets/Endmessdrehteller.jpg" alt="Endmessdrehteller"/>
         </div>
         <div class="slide hidden">
             <p>Laserschweißdrehteller</p>
-            <img src="./assets/Laserschweissdrehteller.jpg" alt="Laserschweissdrehteller"/>
+            <img loading="lazy" src="./assets/Laserschweissdrehteller.jpg" alt="Laserschweissdrehteller"/>
         </div>
         <button class="arrow-right right">
             <i class="bi bi-arrow-right"></i>

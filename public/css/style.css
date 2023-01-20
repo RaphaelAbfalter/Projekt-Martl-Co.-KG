@@ -8,7 +8,6 @@
     --main-theme:#fa1112;
     --secondary-theme:#fa3233;
 }
-
 @media (prefers-color-scheme: dark){
     :root{
         --main-color:#1f1f1f;
@@ -69,6 +68,7 @@ path{
 .form-button{
     padding: 0.2rem;
     margin: 0.4rem;
+    border-radius: 0.4rem;
 }
 .content-container{
     display:flex;
@@ -159,7 +159,6 @@ footer{
     border-top: solid 1px var(--text-color);
     transition: all 0.2s;
 }
-
 footer>span:nth-child(1),
 footer>span:nth-child(3){
     width: 4rem;
@@ -355,7 +354,6 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     grid-row:1;
     grid-column: 1 / span 3;
 }
-
 .mech-kons > .part-header{
     grid-row:3;
     grid-column: 2;
@@ -449,7 +447,6 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     box-shadow: inset 0 0 2rem 2px var(--secondary-color);
     margin:0;
 }
-
 .video-section,
 .video-section>ul{
     padding: 1rem 1rem;
@@ -475,11 +472,7 @@ input[type="submit"]:hover{
 }
 /* LOGIN */
 
-
-
 /* REGISTER */
-
-
 
 /* KONTAKT */
 #dialog{
@@ -491,11 +484,9 @@ input[type="submit"]:hover{
     border: 0;
     border-radius: 2rem;
     box-shadow: 0 0 20rem 5rem var(--secondary-color);
-    max-height:60%;
+    max-height:90%;
 }
 /* CONTACT VIEW */
-
-
 
 /* NEWSLETTER */
 .newsletter-create,
@@ -523,15 +514,4 @@ input[type="submit"]:hover{
     flex-direction: row;
     justify-content: flex-end;
 }
-
 /* ANFAHRT */
-
-/* ANIMATIONS */
-@keyframes fade{
-    from {
-      opacity: 0;
-    }
-    to{
-      opacity: 1;
-    }
-  }

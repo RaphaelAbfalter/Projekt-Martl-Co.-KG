@@ -7,8 +7,8 @@
     @if ($errors->has('name'))
         <span class="text-danger">{{ $errors->first('name') }}</span>
     @endif
-    <label for="email">E-Mail:</label>
-    <input type="email" class="input-design" name="email" id="email" placeholder="name@example.com">
+    <label for="mail">E-Mail:</label>
+    <input type="email" class="input-design" name="email" id="mail" placeholder="name@example.com">
     @if ($errors->has('email'))
         <span class="text-danger">{{ $errors->first('email') }}</span>
     @endif

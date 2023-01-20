@@ -26,10 +26,8 @@
     @endif
     @foreach ($newsletters as $newsletter)
     <article class="newsletter-article">
-        <h2>{{ $newsletter->title }}</h2>
-        <p class="newsletter-content">{{ $newsletter->body }}</p>
-        <hr>
-        <p class="newsletter-date">Published at: {{ $newsletter->created_at }}</p>
+        <div class="newsletter-header"><h2>{{ $newsletter->title }}</h2><p class="newsletter-date">{{ $newsletter->created_at }}</p></div>
+        <div class="newsletter-content"><p>{{ $newsletter->body }}</p></div>
         @if ($showForm)
         <span class="newsletter-article-actions">
             <form action="{{ route('newsletter.destroy', $newsletter->id) }}" method="post">

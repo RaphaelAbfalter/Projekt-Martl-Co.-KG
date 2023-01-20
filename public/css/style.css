@@ -504,21 +504,36 @@ input[type="submit"]:hover{
 }
 .newsletter-article{
     width: 50%;
-    margin-right:0;
+    text-align: left;
+    padding-top: 3rem;
 }
 .newsletter-create>form{
     width:100%;
 }
-.newsletter-article{
-    text-align: left;
-    padding-top: 3rem;
-}
-.newsletter-article>.newsletter-content{
+.newsletter-content>p{
     word-wrap: break-word;
     text-indent: 1rem;
 }
+.newsletter-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+.newsletter-header>p{
+    margin-left:1rem;
+    white-space:nowrap;
+}
+.newsletter-header>h2{
+    word-break: break-word;
+}
 .newsletter-content{
     padding: 1rem 0;
+    background-color: var(--secondary-color);
+}
+.newsletter-header,
+.newsletter-content{
+    border-bottom: solid 1px var(--text-color);
 }
 .newsletter-article>p,
 .newsletter-article>h2{
@@ -526,6 +541,7 @@ input[type="submit"]:hover{
 }
 .newsletter-date{
     font-size: 0.8rem;
+    margin:0;
 }
 .newsletter-article-actions{
     display:flex;

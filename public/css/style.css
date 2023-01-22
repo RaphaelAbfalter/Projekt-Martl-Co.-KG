@@ -28,7 +28,7 @@ body, div, form, dialog{
 table{
     background-color: var(--secondary-color);
 }
-h1, h2, h3, h4, h5, h6, p, a, a:hover, ul, label{
+h1, h2, h3, h4, h5, h6, p, a, a:hover, ul, label, summary{
     color: var(--text-color);
 }
 a, button, input[type="submit"]{
@@ -436,7 +436,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     grid-row:3;
 }
 /* VIDEO */
-.video-section,.newsletter-create, .newsletter-create>form, .contact-create, .arrival-section{
+.video-section,.newsletter-create, .newsletter-create>form, .contact-create, .arrival-section, .impressum-section{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -463,7 +463,8 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     padding: 1rem 1rem;
 }
 .video-section,
-.arrival-section{
+.arrival-section,
+.impressum-section{
     max-width:50%;
 }
 /* LOGIN / REGISTER / KONTAKT */
@@ -573,4 +574,12 @@ input[type="submit"]:hover{
     border: solid 2px var(--secondary-color);
     box-shadow: inset 0 0 2rem 2px var(--secondary-color);
     margin:0;
+}
+/* IMPRESSUM */
+.impressum-section{
+    text-align: center;
+}
+.impressum-section>ul{
+    list-style-type:none;
+    padding:0;
 }

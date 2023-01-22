@@ -17,6 +17,6 @@
     @if ($errors->has('message'))
         <span class="text-danger">{{ $errors->first('message') }}</span>
     @endif
-    <button type="submit" class="style-button form-button">Absenden</button>
+    <input type="submit" value="Absenden" class="style-button form-button"/>
 </form>
 </div>

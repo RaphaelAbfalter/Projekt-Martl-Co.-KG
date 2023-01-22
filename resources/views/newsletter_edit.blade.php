@@ -11,6 +11,6 @@
         <label for="text">Text:</label>
         <textarea name="text" id="text">{{ $newsletter->body }}</textarea>
         <br>
-        <input type="submit" value="Save Changes">
+        <input type="submit" value="Änderungen speichern" class="style-button form-button">
     </form>
 @endsection

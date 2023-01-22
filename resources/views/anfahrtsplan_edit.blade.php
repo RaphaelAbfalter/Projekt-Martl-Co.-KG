@@ -23,7 +23,7 @@
         <label for="publicTransportToWorkshop">Anreise mit öffentlichen Verkehrsmittel:</label>
         <textarea name="publicTransportToWorkshop" id="publicTransportToWorkshop">{{ $texts->publicTransportToWorkshop }}</textarea>
         <br>
-        <input type="submit" value="Save Changes">
+        <input type="submit" value="Änderungen speichern" class="style-button form-button">
     </form>
 </main>
 @endsection

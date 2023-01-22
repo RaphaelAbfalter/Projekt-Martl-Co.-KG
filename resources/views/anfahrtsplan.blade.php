@@ -30,7 +30,7 @@
     </section>
     @if($isAdmin)
         <form action="{{ route('anfahrtsplan_edit') }}" method="get">
-            <input type="submit" value="Bearbeiten">
+            <input type="submit" value="Bearbeiten" class="style-button form-button">
         </form>
     @endif
 </main>

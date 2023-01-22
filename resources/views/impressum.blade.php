@@ -64,7 +64,7 @@
     
     @if($isAdmin)
     <form action="{{ route('impressum_edit') }}" method="get">
-        <input type="submit" value="Edit">
+        <input type="submit" value="Bearbeiten" class="style-button form-button">
     </form>
     @endif
 </main>

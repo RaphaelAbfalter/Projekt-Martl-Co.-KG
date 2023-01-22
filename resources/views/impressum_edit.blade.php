@@ -31,6 +31,6 @@
         <label for="adresse">Adresse:</label>
         <textarea name="adresse" id="adresse">{{ $texts->adresse }}</textarea>
         <br>
-        <input type="submit" value="Save Changes">
+        <input type="submit" value="Änderungen speichern" class="style-button form-button">
     </form>
 @endsection

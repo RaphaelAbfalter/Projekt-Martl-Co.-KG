@@ -36,7 +36,7 @@
                     </select>
                 </div>
                 <br>
-                <input type="submit" value="Upload">
+                <input type="submit" value="Hochladen" class="style-button form-button">
             </form>
         @endif
     </div>

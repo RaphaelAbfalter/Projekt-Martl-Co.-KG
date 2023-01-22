@@ -1,8 +1,8 @@
 @extends('dashboard')
 @section('content')
-<body>
+<main class="content-container">
     <h1>Downloads</h1>
-    <div class="downloads">
+    <div class="download-section">
         @if(isset($no_files) && $no_files)
         <p>There are no files available for download.</p>
         @else

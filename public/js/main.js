@@ -55,7 +55,6 @@ document.addEventListener("click", function(e){
 const colorToggler = document.getElementById("color-toggle");
 const rootStyle = document.querySelector(":root").style;
 function setColorMode(mode){
-    console.log(mode);
     switch(mode){
         case "true":
             rootStyle.setProperty("--main-color", "#1f1f1f");

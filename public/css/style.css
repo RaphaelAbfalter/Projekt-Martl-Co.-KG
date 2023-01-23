@@ -85,9 +85,6 @@ hr{
     border-color: var(--text-color);
 }
 /* HEADER */
-header{
-    border-bottom: solid 1px var(--text-color);
-}
 nav{
     display: flex;
     flex-direction: row;
@@ -170,7 +167,6 @@ footer{
     justify-content: space-around;
     align-items: center;
     background-color: var(--secondary-color);
-    border-top: solid 1px var(--text-color);
     transition: all 0.2s;
 }
 footer>span:nth-child(1),

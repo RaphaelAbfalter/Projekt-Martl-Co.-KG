@@ -23,7 +23,7 @@
               @if(isset(Auth::user()['admin']))
                    @if(Auth::user()['admin'])
                         <span class="dropdown">
-                             <button id="dropdownButton" class="dropdown-button style-button" data-dropdown="admin">Admin</button>
+                             <button id="dropdownButton" class="dropdown-button style-button admin-style" data-dropdown="admin">Admin</button>
                              <span class="dropdown-content" data-dropdown="admin">
                                     <a href="{{ URL('/contactShow') }}">Kontakt</a>
                                     <a href="{{ URL('/newsletter') }}">Newsletter</a>

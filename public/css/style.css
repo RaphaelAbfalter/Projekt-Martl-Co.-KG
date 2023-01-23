@@ -7,6 +7,7 @@
 :root{
     --main-theme:#fa1112;
     --secondary-theme:#fa3233;
+    --admin-color: #1bab02;
 }
 @media (prefers-color-scheme: dark){
     :root{
@@ -147,6 +148,12 @@ nav>span>a:not(:last-of-type){
 .dropdown-button{
     position: relative;
     z-index: 3;
+}
+.admin-style{
+    background-color: var(--admin-color);
+}
+.dropdown-content[data-dropdown="admin"]{
+    border-color: var(--admin-color);
 }
 /* FOOTER */
 footer{

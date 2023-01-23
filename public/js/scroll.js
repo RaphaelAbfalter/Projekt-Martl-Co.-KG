@@ -17,7 +17,6 @@ function stickyFooter(){
         // footer.style.bottom=((window.innerHeight + window.scrollY) -footer.offsetHeight)-document.body.offsetHeight;
         // footer.style.bottom=((window.innerHeight + window.scrollY))-document.body.offsetHeight+"px";
         footer.style.bottom="0";
-    
     }
     else{
         footer.style.bottom="-7rem";

@@ -14,10 +14,10 @@
         crossorigin="anonymous"></script>
         <!-- icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <!-- main logic -->
+        <script defer type="text/javascript" src="{{asset('js/main.js')}}"></script>
         <!-- custom main stylesheet -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
-       <!-- main logic -->
-       <script defer type="text/javascript" src="{{asset('js/main.js')}}"></script>
        <!-- dialog logic -->
        <script defer type="text/javascript" src="{{asset('js/dialog.js')}}"></script>
     </head>

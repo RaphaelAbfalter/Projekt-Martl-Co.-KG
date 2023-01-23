@@ -3,7 +3,7 @@
        <nav>
               <span id="stickyBar">
                      <a href="{{ URL('/') }}" class="logo">
-                            <img src="assets/LOGO_Martl&Co.KG.svg">
+                            <img src="{{asset('assets/LOGO_Martl&Co.KG.svg')}}">
                      </a>
               </span>
               <span>

@@ -7,7 +7,7 @@
 :root{
     --main-theme:#fa1112;
     --secondary-theme:#fa3233;
-    --admin-color: #1bab02;
+    --admin-color: #006DFF;
 }
 @media (prefers-color-scheme: dark){
     :root{
@@ -119,6 +119,10 @@ nav{
 }
 nav>span{
     margin: 0 1rem 0 auto;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.2rem;
 }
 nav>span>a:not(:last-of-type){
     margin: 0.4rem;

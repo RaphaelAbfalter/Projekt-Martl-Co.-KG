@@ -517,7 +517,19 @@ input[type="submit"]:hover{
     max-height:90%;
 }
 /* CONTACT VIEW */
-
+.contacts-table{
+    width: 80%;
+    display:table;
+    border-collapse: collapse;
+    background-color: var(--main-color);
+    color:var(--text-color);
+    box-shadow: 0 0 1rem 0.5rem var(--secondary-color);
+    border-radius: 0.8rem;
+}
+.contacts-table>thead>tr>th,
+.contacts-table>tbody>tr>td{
+    padding:0.4rem;
+}
 /* NEWSLETTER */
 .newsletter-create{
     width: 30%;

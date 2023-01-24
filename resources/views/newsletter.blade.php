@@ -7,9 +7,15 @@
         <form action="{{ route('newsletter.store') }}" method="post">
             @csrf
             <label for="title">Title:</label>
+            @if ($errors->has('title'))
+                <span class="text-danger">Geben Sie einen Titel ein!</span>
+            @endif
             <input type="text" name="title" id="title" class="input-design">
             <label for="text">Text:</label>
-            <textarea name="text" id="text" class="input-design textarea-design input-edit"></textarea>
+            @if ($errors->has('text'))
+                <span class="text-danger">Geben Sie einen Text ein!</span>
+            @endif
+            <textarea name="text" id="text" class="input-design textarea-design"></textarea>
             <span class="newsletter-article-actions">
                 <input type="submit" value="Newsletter erstellen" class="style-button form-button">
             </span>
@@ -26,7 +32,7 @@
     @endif
     @foreach ($newsletters as $newsletter)
     <article class="newsletter-article">
-        <div class="newsletter-header"><h2>{{ $newsletter->title }}</h2><p class="newsletter-date">{{ $newsletter->created_at }}</p></div>
+        <div class="newsletter-header"><h2>{{ $newsletter->title }}</h2><p class="newsletter-date">{{ date_format($newsletter->created_at, "d.m.Y") }}</p></div>
         <div class="newsletter-content"><p>{{ $newsletter->body }}</p></div>
         @if ($showForm)
         <span class="newsletter-article-actions">

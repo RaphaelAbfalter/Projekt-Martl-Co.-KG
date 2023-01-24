@@ -35,6 +35,11 @@ class NewsletterController extends Controller
     {
         $user = Auth::user();
 
+        $request->validate([
+            'title'    => 'required',
+            'text'     => 'required|min:10'
+        ]);
+
         if ($user) {
             if ($user->admin) {
                 $newsletter = new Newsletter();

@@ -94,11 +94,32 @@ colorToggler.addEventListener("change",function(){
 })
 
 const textareas = document.querySelectorAll("textarea");
-    textareas.forEach(textarea =>{
-        textarea.addEventListener("input",function(){
-            this.style.height = "";
-            this.style.height = this.scrollHeight +1+ "px";
-        })
-        textarea.style.height = "";
-        textarea.style.height = textarea.scrollHeight +1+ "px";
+textareas.forEach(textarea =>{
+    textarea.addEventListener("input",function(){
+        this.style.height = "";
+        this.style.height = this.scrollHeight +1+ "px";
     })
+    textarea.style.height = "";
+    textarea.style.height = textarea.scrollHeight +1+ "px";
+})
+
+const infoCards = document.querySelectorAll(".info-card");
+infoCards.forEach(infoCard=>{
+    infoCard.addEventListener("mouseover",function(e){
+        infoCards.forEach(card => {
+            if(card!=e.target){
+                card.style.opacity=0.2;
+                card.style.transform="scale(0.8)"
+            }
+        });
+    })
+    infoCard.addEventListener("mouseout",function(e){
+        infoCards.forEach(card => {
+            if(card!=e.target){
+                card.style.opacity=1;
+                card.style.removeProperty("transform");
+            }
+        });
+    })
+})
+    

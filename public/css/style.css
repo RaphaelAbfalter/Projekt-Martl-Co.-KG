@@ -378,7 +378,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     border-radius: 25px;
     display: grid;
     place-items: center;
-    transition: all 0.2s;
+    transition: 0.2s,box-shadow 0.2s, transform 0.5s;
     padding: 1rem;
     word-break: normal;
     hyphens: auto;
@@ -393,12 +393,15 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     aspect-ratio: auto;
     transition: all 0.3s;
 }
+.info-card>p,.info-card>svg{
+    pointer-events: none;
+}
 .info-card:hover{
     transform: scale(1.15);
     box-shadow: 0 3rem 1.5rem -3rem var(--secondary-theme);
 }
 .info-card:hover>svg{
-    transform: scale3d(1.5,1.5,1.5);
+    transform: scale(1.5);
 }
 .mech-kons,
 .elec-plan,

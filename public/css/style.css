@@ -254,7 +254,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     z-index: 10;
 }
 .color-toggle-label svg.sun>path{
-    stroke: var(--text-color)
+    stroke: var(--main-color)
 }
 .color-toggle-label svg.moon>path{
     stroke: var(--secondary-color)
@@ -267,7 +267,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
 }
 .color-toggle-label svg.sun{
     left: 0.175rem;
-    fill: var(--text-color);
+    fill: var(--secondary-color);
     transition:0.3s;
 }
 .color-toggle-label svg.moon{

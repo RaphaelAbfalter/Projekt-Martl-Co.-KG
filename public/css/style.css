@@ -665,6 +665,14 @@ input[type="submit"]:hover{
     flex-direction: row;
     justify-content: flex-end;
 }
+.error-msg{
+    color: var(--secondary-theme);
+    background-color: var(--secondary-color);
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2px 0 var(--text-color);
+    margin-bottom: 0.4rem;
+}
 /* ANFAHRT */
 .arrival-section>iframe{
     border-radius: 0.8rem;

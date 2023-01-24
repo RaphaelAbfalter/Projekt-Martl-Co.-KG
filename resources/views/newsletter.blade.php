@@ -8,12 +8,12 @@
             @csrf
             <label for="title">Title:</label>
             @if ($errors->has('title'))
-                <span class="text-danger">Geben Sie einen Titel ein!</span>
+                <span class="error-msg">Geben Sie einen Titel ein!</span>
             @endif
             <input type="text" name="title" id="title" class="input-design">
             <label for="text">Text:</label>
             @if ($errors->has('text'))
-                <span class="text-danger">Geben Sie einen Text ein!</span>
+                <span class="error-msg">Geben Sie einen Text ein!</span>
             @endif
             <textarea name="text" id="text" class="input-design textarea-design"></textarea>
             <span class="newsletter-article-actions">

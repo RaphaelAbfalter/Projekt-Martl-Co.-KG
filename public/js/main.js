@@ -92,3 +92,13 @@ colorToggler.addEventListener("change",function(){
         setColorMode("false");
     }
 })
+
+const textareas = document.querySelectorAll("textarea");
+    textareas.forEach(textarea =>{
+        textarea.addEventListener("input",function(){
+            this.style.height = "";
+            this.style.height = this.scrollHeight +1+ "px";
+        })
+        textarea.style.height = "";
+        textarea.style.height = textarea.scrollHeight +1+ "px";
+    })

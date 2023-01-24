@@ -9,7 +9,7 @@
             <label for="title">Title:</label>
             <input type="text" name="title" id="title" class="input-design">
             <label for="text">Text:</label>
-            <textarea name="text" id="text" class="input-design textarea-design"></textarea>
+            <textarea name="text" id="text" class="input-design textarea-design input-edit"></textarea>
             <span class="newsletter-article-actions">
                 <input type="submit" value="Newsletter erstellen" class="style-button form-button">
             </span>

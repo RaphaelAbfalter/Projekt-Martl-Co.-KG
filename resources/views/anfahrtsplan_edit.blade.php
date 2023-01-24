@@ -1,6 +1,6 @@
 @extends('dashboard')
 @section('content')
-<main>
+<main class="content-container">
     <h1>Edit Anfahrtsplan</h1>
     <form action="{{ route('anfahrtsplan_update') }}" method="post">
         @csrf

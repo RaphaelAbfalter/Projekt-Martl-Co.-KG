@@ -517,7 +517,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     grid-row:3;
 }
 /* VIDEO */
-.video-section,.newsletter-create, .newsletter-create>form, .contact-create, .arrival-section, .impressum-section{
+.video-section,.newsletter-create, .newsletter-create>form, .contact-create, .arrival-section, .impressum-section, .impressum-edit, .arrival-edit, .newsletter-edit{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -545,8 +545,15 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
 }
 .video-section,
 .arrival-section,
-.impressum-section{
+.impressum-section,
+.newsletter-section
+{
     max-width:50%;
+}
+.impressum-edit,
+.arrival-edit,
+.newsletter-edit{
+    max-width:30%;
 }
 /* LOGIN / REGISTER / KONTAKT */
 label{
@@ -564,9 +571,15 @@ input[type="submit"]:hover{
     padding: 0.2rem;
     width: 100%;
     border: 0;
+    box-shadow: inset 0 -0.5rem 1rem -0.5rem var(--secondary-color), 0 0 0.2rem 0 var(--text-color);
+    transition: box-shadow 0.3s;
+}
+.input-design:focus{
+    box-shadow: inset 0 0.5rem 1rem -0.5rem var(--secondary-color);
 }
 .textarea-design{
     resize:both;
+    min-height: 4rem;
 }
 .user-button{
     margin-left: 0;
@@ -574,10 +587,6 @@ input[type="submit"]:hover{
 .user-form{
     width:30%;
 }
-/* LOGIN */
-
-/* REGISTER */
-
 /* KONTAKT */
 #dialog{
     position: fixed;
@@ -601,6 +610,7 @@ input[type="submit"]:hover{
     border-radius: 0.8rem;
 }
 .contacts-table>thead>tr>th,
+.contacts-table>tbody>tr>th,
 .contacts-table>tbody>tr>td{
     padding:0.4rem;
 }
@@ -655,6 +665,14 @@ input[type="submit"]:hover{
     flex-direction: row;
     justify-content: flex-end;
 }
+.error-msg{
+    color: var(--secondary-theme);
+    background-color: var(--secondary-color);
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2px 0 var(--text-color);
+    margin-bottom: 0.4rem;
+}
 /* ANFAHRT */
 .arrival-section>iframe{
     border-radius: 0.8rem;
@@ -675,4 +693,8 @@ input[type="submit"]:hover{
 .impressum-section>ul{
     list-style-type:none;
     padding:0;
+}
+/* ADMIN RELATED SITES */
+.input-edit{
+    resize: vertical;
 }

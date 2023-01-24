@@ -14,8 +14,6 @@ function stickyHeader(){
 function stickyFooter(){
     const footer = document.querySelector("footer");
     if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight) -1) {
-        // footer.style.bottom=((window.innerHeight + window.scrollY) -footer.offsetHeight)-document.body.offsetHeight;
-        // footer.style.bottom=((window.innerHeight + window.scrollY))-document.body.offsetHeight+"px";
         footer.style.bottom="0";
     }
     else{

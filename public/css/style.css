@@ -389,7 +389,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     width: 12rem;
 }
 .info-card>svg{
-    width: 3rem;
+    height: 3rem;
     aspect-ratio: auto;
     transition: all 0.3s;
 }

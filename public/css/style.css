@@ -32,7 +32,7 @@ table{
 h1, h2, h3, h4, h5, h6, p, a, a:hover, ul, label, summary{
     color: var(--text-color);
 }
-a, button, input[type="submit"]{
+a, button, input[type="submit"],::-webkit-file-upload-button, select{
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -52,14 +52,14 @@ path{
     border-radius: 0.2rem;
     background-color: var(--main-color);
 }
-.style-button{
+.style-button, ::-webkit-file-upload-button, select, option{
     border-radius: 0.8rem;
     transition: all 0.2s;
     color: #f1f1f1;
     background-color: var(--main-theme);
     padding: 0.8rem;
 }
-.style-button:hover{
+.style-button:hover,::-webkit-file-upload-button:hover, select:hover{
     background-color: var(--text-color);
     color:var(--main-color);
     text-decoration: none;
@@ -517,7 +517,7 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     grid-row:3;
 }
 /* VIDEO */
-.video-section,.newsletter-create, .newsletter-create>form, .contact-create, .arrival-section, .impressum-section, .impressum-edit, .arrival-edit, .newsletter-edit{
+.video-section,.newsletter-create, .newsletter-create>form, .contact-create, .arrival-section, .impressum-section, .impressum-edit, .arrival-edit, .newsletter-edit, .download-section, .download-section>form, .download-section>form>span{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -547,14 +547,15 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
 .video-section,
 .arrival-section,
 .impressum-section,
-.newsletter-section,
-.download-section
+.newsletter-section
 {
     max-width:50%;
 }
 .impressum-edit,
 .arrival-edit,
-.newsletter-edit{
+.newsletter-edit,
+.download-section
+{
     max-width:30%;
 }
 /* LOGIN / REGISTER / KONTAKT */
@@ -701,3 +702,38 @@ input[type="submit"]:hover{
     resize: vertical;
 }
 /* DOWNLOADS */
+.download-section{
+    align-items: flex-start;
+    row-gap: 0.4rem;
+}
+.download-section>a{
+    padding:0.4rem;
+    border-radius: 0.4rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 2px 0 var(--text-color);
+    transition: all 0.2s;
+}
+.download-section>a:hover{
+    text-decoration: none;
+    background-color: var(--secondary-theme);
+}
+.download-section>ul>li>a{
+    background-color: var(--secondary-color);
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+}
+input[type="file"]{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+}
+select:is(:focus, :active){
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+option:nth-child(2n){
+    background-color: var(--secondary-theme);
+}
+option:last-child{
+    border-radius: 0 0 0.8rem 0.8rem;
+}

@@ -49,8 +49,7 @@ class FileController extends Controller
             $path = Storage::putFile('public/files', $file);
             $visibility = $request->input('access_level');
 
-
-            $user_id = ($visibility == 'all') ? Auth::user()->id : $request->input('users')[0];
+            $user_id = ($visibility == 'all') ? Auth::user()->id : $request['user'];
             $fileName = $file->getClientOriginalName();
             
             DownloadFile::create(['path' => $path, 'fileName'=>$fileName, 'user_id' => $user_id, 'visibility' => $visibility]);

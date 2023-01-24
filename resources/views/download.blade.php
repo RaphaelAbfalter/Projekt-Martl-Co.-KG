@@ -28,10 +28,10 @@
                 </select>
                 <br>
                 <div id="specific_users" style="display: none">
-                    <label for="users">Select specific users:</label>
-                    <select id="users" name="users[]" multiple>
+                    <label for="user">Select specific users:</label>
+                    <select id="user" name="user">
                         @foreach($users as $user)
-                            <option value="{{ $user->user_id }}">{{ $user->name }}</option>
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
                         @endforeach
                     </select>
                 </div>

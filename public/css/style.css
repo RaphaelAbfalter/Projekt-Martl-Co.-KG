@@ -601,6 +601,7 @@ input[type="submit"]:hover{
     border-radius: 0.8rem;
 }
 .contacts-table>thead>tr>th,
+.contacts-table>tbody>tr>th,
 .contacts-table>tbody>tr>td{
     padding:0.4rem;
 }

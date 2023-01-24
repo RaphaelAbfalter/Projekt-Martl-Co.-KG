@@ -9,20 +9,6 @@
     --secondary-theme:#fa3233;
     --admin-color: #006DFF;
 }
-/* @media (prefers-color-scheme: dark){
-    :root{
-        --main-color:#1f1f1f;
-        --secondary-color:#303030;
-        --text-color:#f1f1f1;
-    }
-} */
-/* @media (prefers-color-scheme: light){
-    :root{
-        --main-color:#f1f1f1;
-        --secondary-color:#e2e2e2;
-        --text-color:#1f1f1f;
-    }
-} */
 body, div, form, dialog{
     background-color:var(--main-color);
 }
@@ -41,8 +27,11 @@ a, button, input[type="submit"],::-webkit-file-upload-button, select{
 a:hover{
     text-decoration: underline;
 }
-svg,path{
+.stroke,.stroke>path{
     stroke: var(--text-color);
+}
+.fill,.fill>path{
+    fill: var(--text-color);
 }
 ::-webkit-scrollbar{
     background-color: var(--secondary-color);
@@ -382,11 +371,6 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     opacity:1;
 }
 /* PORJEKTMANAGEMENT */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .info-card {
     width:14rem;
     height:14rem;

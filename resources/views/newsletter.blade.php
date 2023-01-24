@@ -26,7 +26,7 @@
     @endif
     @foreach ($newsletters as $newsletter)
     <article class="newsletter-article">
-        <div class="newsletter-header"><h2>{{ $newsletter->title }}</h2><p class="newsletter-date">{{ $newsletter->created_at }}</p></div>
+        <div class="newsletter-header"><h2>{{ $newsletter->title }}</h2><p class="newsletter-date">{{ date_format($newsletter->created_at, "d.m.Y") }}</p></div>
         <div class="newsletter-content"><p>{{ $newsletter->body }}</p></div>
         @if ($showForm)
         <span class="newsletter-article-actions">

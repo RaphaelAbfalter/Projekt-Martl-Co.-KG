@@ -41,7 +41,7 @@ a, button, input[type="submit"],::-webkit-file-upload-button, select{
 a:hover{
     text-decoration: underline;
 }
-path{
+svg,path{
     stroke: var(--text-color);
 }
 ::-webkit-scrollbar{

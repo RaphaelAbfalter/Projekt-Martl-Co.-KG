@@ -540,13 +540,15 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
 .video-section,
 .video-section>ul,
 .arrival-section,
-.arrival-section>div{
+.arrival-section>div,
+.download-section{
     padding: 1rem 1rem;
 }
 .video-section,
 .arrival-section,
 .impressum-section,
-.newsletter-section
+.newsletter-section,
+.download-section
 {
     max-width:50%;
 }
@@ -698,3 +700,4 @@ input[type="submit"]:hover{
 .input-edit{
     resize: vertical;
 }
+/* DOWNLOADS */

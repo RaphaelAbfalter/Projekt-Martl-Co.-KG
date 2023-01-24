@@ -2,7 +2,7 @@
 @section('content')
 <main class="content-container">
     <h1>Downloads</h1>
-    <div class="download-section">
+    <section class="download-section">
         @if(isset($no_files) && $no_files)
         <p>There are no files available for download.</p>
         @else
@@ -39,8 +39,7 @@
                 <input type="submit" value="Hochladen" class="style-button form-button">
             </form>
         @endif
-    </div>
-
+    </section>
 @if($isAdmin)
 <script>
     document.getElementById("access_level").addEventListener("change", function(){

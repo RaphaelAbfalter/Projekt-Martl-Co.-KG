@@ -9,7 +9,7 @@
         <ul>
             @foreach($files as $file)
             <li>
-                <a href="{{ route('download.file', $file->user_id) }}">{{ $file->fileName }}</a>
+                <a href="{{ route('download.file', $file->id) }}">{{ $file->fileName }}</a>
             </li>
             @endforeach
         </ul>

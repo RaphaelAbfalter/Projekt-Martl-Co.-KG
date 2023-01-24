@@ -13,8 +13,9 @@ class FileController extends Controller
     public function download($id)
     {
         $file = DownloadFile::findOrFail($id);
+
         if ($file->visibility == 'all' || ($file->visibility == 'specific' && $file->user_id == auth()->id())) {
-            return Storage::download($file->path, $file->name);
+            return Storage::download($file->path, $file->fileName);
         } else {
             return back()->with('error', 'File is not available for download');
         }

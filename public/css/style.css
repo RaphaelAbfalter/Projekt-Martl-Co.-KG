@@ -718,6 +718,12 @@ input[type="submit"]:hover{
     align-items: flex-start;
     row-gap: 0.4rem;
 }
+.download-add-section{
+    border-radius: 0.2rem;
+    border: solid 2px var(--secondary-color);
+    box-shadow: inset 0 0 2rem 2px var(--secondary-color);
+    padding: 2rem 2rem;
+}
 .download-section>a{
     padding:0.4rem;
     border-radius: 0.4rem;
@@ -733,6 +739,12 @@ input[type="submit"]:hover{
     background-color: var(--secondary-color);
     border-radius: 0.4rem;
     padding: 0.2rem;
+}
+.download-section>form{
+    align-items: flex-start;
+}
+.download-section>form>#specific_users{
+    align-items: flex-start;
 }
 input[type="file"]{
     background-color: var(--secondary-color);

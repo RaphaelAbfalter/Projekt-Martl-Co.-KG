@@ -11,7 +11,7 @@
             @endforeach
         @endif
     </section>
-    <section class="download-section">
+    <section class="download-section download-add-section">
         @if($isAdmin)
             <form method="post" action="{{ route('upload') }}" enctype="multipart/form-data">
                 @csrf
@@ -30,7 +30,7 @@
                         @endforeach
                     </select>
                 </span>
-                <input type="submit" value="Hochladen" class="style-button form-button">
+                <input type="submit" value="Hochladen" class="style-button form-button user-button">
             </form>
         @endif
     </section>

@@ -12,17 +12,17 @@
     @endif
 
     @if ($errors->has('name'))
-        <span class="text-danger">{{ $errors->first('name') }}</span>
+        <span class="error-msg">{{ $errors->first('name') }}</span>
     @endif
     <label for="mail">E-Mail:</label>
     <input type="email" class="input-design" name="email" id="mail" placeholder="name@example.com">
     @if ($errors->has('email'))
-        <span class="text-danger">{{ $errors->first('email') }}</span>
+        <span class="error-msg">{{ $errors->first('email') }}</span>
     @endif
     <label for="message">Nachricht:</label>
     <textarea class="input-design textarea-design" name="message" id="message" placeholder="Nachricht"></textarea>
     @if ($errors->has('message'))
-        <span class="text-danger">{{ $errors->first('message') }}</span>
+        <span class="error-msg">{{ $errors->first('message') }}</span>
     @endif
     <input type="submit" value="Absenden" class="style-button form-button"/>
 </form>

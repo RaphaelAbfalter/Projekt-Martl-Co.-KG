@@ -677,10 +677,10 @@ input[type="submit"]:hover{
 .error-msg{
     color: var(--secondary-theme);
     background-color: var(--secondary-color);
-    padding: 0.2rem;
+    padding: 0.2rem 0.1rem;
     border-radius: 0.4rem;
     box-shadow: 0 0 2px 0 var(--text-color);
-    margin-bottom: 0.4rem;
+    margin: 0.4rem 0;
 }
 /* ANFAHRT */
 .arrival-section>iframe{

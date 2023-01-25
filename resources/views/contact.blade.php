@@ -4,6 +4,13 @@
     @csrf
         <label for="contact-name">Vorname und Nachname:</label>
         <input type="text" class="input-design" name="name" id="contact-name" placeholder="Name">
+
+    @if ($errors->has('name') OR $errors->has('email') OR $errors->has('message'))
+        @php
+            echo '<script>document.querySelector("dialog").showModal();</script>';
+        @endphp
+    @endif
+
     @if ($errors->has('name'))
         <span class="text-danger">{{ $errors->first('name') }}</span>
     @endif

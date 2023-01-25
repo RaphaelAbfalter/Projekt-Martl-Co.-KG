@@ -1,7 +1,7 @@
 @extends('dashboard')
 @section('content')
 <main class="content-container">
-    <h1>Registrieren</h1>
+    <h1>Kunden erstellen</h1>
     <form action="{{ route('register.custom') }}" method="POST" class="user-form">
         @csrf
         <label for="name">Vorname und Nachname:</label>

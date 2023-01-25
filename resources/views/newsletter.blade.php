@@ -25,7 +25,7 @@
         <form action="{{ route('subscriber.store') }}" method="post">
             @csrf
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" class="input-design">
+            <input type="email" name="newsletter_email" id="email" class="input-design">
             <input type="submit" value="Newsletter abonnieren" class="style-button form-button">
         </form>
     </section>

@@ -683,7 +683,7 @@ input[type="submit"]:hover{
     padding: 0.2rem 0.1rem;
     border-radius: 0.4rem;
     box-shadow: 0 0 2px 0 var(--text-color);
-    margin: 0.4rem 0;
+    margin-bottom: 0.4rem;
 }
 /* ANFAHRT */
 .arrival-section>iframe{

@@ -22,10 +22,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/alternate', function () {
-    return view('index_alternate');
-});
-
 //CONTACT
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact', [ContactController::class, 'create'])->name('contact.create');
@@ -76,3 +72,18 @@ Route::put('/anfahrtsplan', [AnfahrtsplanController::class, 'update'])->name('an
 Route::get('/impressum', [ImpressumController::class, 'show'])->name('impressum');
 Route::get('/impressum_edit', [ImpressumController::class, 'edit'])->name('impressum_edit');
 Route::put('/impressum', [ImpressumController::class, 'update'])->name('impressum.update');
+
+//ALTERNATE STARTPAGE
+Route::get('/alternate', function () {
+    return view('index_alternate');
+});
+Route::post('/alternate', function () {
+    $texts = $_POST['texts'];
+    for($i = 0; $i < count($texts); $i++){
+        $j = $i+1;
+        $myfile = fopen('./index_alternate_texts/index_alt_text_'.$j.'.txt', 'w');
+        fwrite($myfile, strip_tags($texts[$i], array('i','b', 'br')));
+        fclose($myfile);
+    }
+    return view('index_alternate');
+});

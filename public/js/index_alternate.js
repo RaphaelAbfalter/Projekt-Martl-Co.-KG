@@ -35,12 +35,26 @@ function plusSlides(n, no) {
     showSlides(slideIndex[no] += n, no);
 }
 
+function openEdit(){
+    document.getElementById("button-parent").innerHTML = '<button type="submit" name="save">Save</button>';
+    Array.from(document.getElementsByName("bildtext"))
+    .forEach(function (element){
+        var content = element.innerHTML;
+        element.innerHTML += '<textarea class="form-control" rows="5" name="texts[]">'+ content +'</textarea>';
+    }
+    );
+}
+
 window.onload = function(){
     showSlides(1, 0);
     showSlides(1, 1);
     imgA = document.getElementById('imgA');
     imgB = document.getElementById('imgB');
     
+    document.getElementById("edit").addEventListener('click', () => {
+        openEdit();
+    })
+
     imgA.addEventListener('mouseover', () => {
         hoverCheck(true, hoverB);
     })

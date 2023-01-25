@@ -8,6 +8,9 @@
     --main-theme:#fa1112;
     --secondary-theme:#fa3233;
     --admin-color: #006DFF;
+    --main-color:#f1f1f1;
+    --secondary-color:#e2e2e2;
+    --text-color:#1f1f1f;
 }
 body, div, form, dialog{
     background-color:var(--main-color);
@@ -683,7 +686,7 @@ input[type="submit"]:hover{
     padding: 0.2rem 0.1rem;
     border-radius: 0.4rem;
     box-shadow: 0 0 2px 0 var(--text-color);
-    margin: 0.4rem 0;
+    margin-bottom: 0.4rem;
 }
 /* ANFAHRT */
 .arrival-section>iframe{

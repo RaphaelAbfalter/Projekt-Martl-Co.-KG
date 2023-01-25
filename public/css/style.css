@@ -113,7 +113,7 @@ nav>span{
     align-items: center;
     column-gap: 0.2rem;
 }
-nav>span>a:not(:last-of-type){
+nav>span>a:first-child{
     margin: 0.4rem;
 }
 .dropdown{
@@ -550,7 +550,8 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
 .video-section,
 .arrival-section,
 .impressum-section,
-.newsletter-section
+.newsletter-section,
+.contacts-single-section
 {
     max-width:50%;
 }

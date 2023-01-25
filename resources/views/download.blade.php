@@ -11,8 +11,8 @@
             @endforeach
         @endif
     </section>
+    @if($isAdmin)
     <section class="download-section download-add-section">
-        @if($isAdmin)
             <form method="post" action="{{ route('upload') }}" enctype="multipart/form-data">
                 @csrf
                 <label for="file">Select file to upload:</label>
@@ -32,8 +32,8 @@
                 </span>
                 <input type="submit" value="Hochladen" class="style-button form-button user-button">
             </form>
-        @endif
-    </section>
+        </section>
+    @endif
 @if($isAdmin)
 <script>
     document.getElementById("access_level").addEventListener("change", function(){

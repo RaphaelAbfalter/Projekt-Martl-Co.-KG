@@ -1,36 +1,31 @@
 @extends('dashboard')
 @section('content')
-    <h1>Edit Impressum</h1>
-    <form action="{{ route('impressum.update') }}" method="post">
-        @csrf
-        @method('PUT')
-        <label for="firmenadresse">Firmensitz Adresse:</label>
-        <textarea name="firmenanschrift" id="firmenanschrift">{{ $texts->firmenanschrift }}</textarea>
-        <br>
-        <label for="unternehmensgegenstand">Unternehmensgegenstand:</label>
-        <textarea name="unternehmensgegenstand" id="unternehmensgegenstand">{{ $texts->unternehmensgegenstand }}</textarea>
-        <br>
-        <label for="UIDNummer">UID-Nummer:</label>
-        <textarea name="UIDNummer" id="UIDNummer">{{ $texts->UIDNummer }}</textarea>
-        <br>
-        <label for="GLA">GLA:</label>
-        <textarea name="GLN" id="GLN">{{ $texts->GLN }}</textarea>
-        <br>
-        <label for="GISA">GISA:</label>
-        <textarea name="GISA" id="GISA">{{ $texts->GISA }}</textarea>
-        <br>
-        <label for="telefonnummer">Telefonnummer:</label>
-        <textarea name="telefonnummer" id="telefonnummer">{{ $texts->telefonnummer }}</textarea>
-        <br>
-        <label for="fax">FAX:</label>
-        <textarea name="fax" id="fax">{{ $texts->fax }}</textarea>
-        <br>
-        <label for="email">E-Mail:</label>
-        <textarea name="email" id="email">{{ $texts->email }}</textarea>
-        <br>
-        <label for="adresse">Adresse:</label>
-        <textarea name="adresse" id="adresse">{{ $texts->adresse }}</textarea>
-        <br>
-        <input type="submit" value="Save Changes">
-    </form>
+<main class="content-container">
+    <h1>Impressum bearbeiten</h1>
+    <section class="impressum-edit">
+        <form action="{{ route('impressum.update') }}" method="post">
+            @csrf
+            @method('PUT')
+            <label for="firmenadresse">Firmensitz Adresse:</label>
+            <input name="firmenanschrift" id="firmenanschrift" class="input-design" value="{{ $texts->firmenanschrift }}">
+            <label for="unternehmensgegenstand">Unternehmensgegenstand:</label>
+            <input name="unternehmensgegenstand" id="unternehmensgegenstand" class="input-design" value="{{ $texts->unternehmensgegenstand }}">
+            <label for="UIDNummer">UID-Nummer:</label>
+            <input name="UIDNummer" id="UIDNummer" class="input-design" value="{{ $texts->UIDNummer }}">
+            <label for="GLA">GLA:</label>
+            <input name="GLN" id="GLN" class="input-design" value="{{ $texts->GLN }}">
+            <label for="GISA">GISA:</label>
+            <input name="GISA" id="GISA" class="input-design" value="{{ $texts->GISA }}">
+            <label for="telefonnummer">Telefonnummer:</label>
+            <input name="telefonnummer" id="telefonnummer" class="input-design" value="{{ $texts->telefonnummer }}">
+            <label for="fax">FAX:</label>
+            <input name="fax" id="fax" class="input-design" value="{{ $texts->fax }}">
+            <label for="email">E-Mail:</label>
+            <input name="email" id="email" class="input-design" value="{{ $texts->email }}">
+            <label for="adresse">Adresse:</label>
+            <input name="adresse" id="adresse" class="input-design" value="{{ $texts->adresse }}">
+            <input type="submit" value="Änderungen speichern" class="style-button form-button user-button">
+        </form>
+    </section>
+</main>
 @endsection

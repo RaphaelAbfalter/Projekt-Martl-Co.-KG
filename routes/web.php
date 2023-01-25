@@ -27,6 +27,7 @@ Route::get('contact', [ContactController::class, 'index'])->name('contact');
 Route::post('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::get('contactShow', [ContactController::class, 'show'])->name('contact.show');
 Route::get('/contactMessage/{id}', [ContactController::class, 'find'])->name('contact.find');
+Route::get('/delete/{id}', [ContactController::class, 'destroy'])->name('contact.find');
 
 //LOGIN AND REGISTRATION
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']);

@@ -1,9 +1,8 @@
-function sticky(){
+function stickyHeader(){
     const nav = document.querySelector("nav");
     const stickyBar = document.getElementById("stickyBar");
-    console.log(stickyBar)
     let rect = nav.getBoundingClientRect();
-    if(rect.top <= -80){
+    if(rect.top <= -40){
         stickyBar.style.height="2.5rem";
         stickyBar.style.width="100%";
     }
@@ -12,9 +11,21 @@ function sticky(){
         stickyBar.style.width=0;
     }
 }
+function stickyFooter(){
+    const footer = document.querySelector("footer");
+    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight) -1) {
+        footer.style.bottom="0";
+    }
+    else{
+        footer.style.bottom="-7rem";
+    }
+}
 document.addEventListener("scroll", function(){
-    sticky();
+    stickyHeader();
+    stickyFooter();
 })
-document.addEventListener("load", function(){
-    sticky();
+window.addEventListener("resize", function(){
+    stickyFooter();
 })
+stickyHeader();
+stickyFooter();

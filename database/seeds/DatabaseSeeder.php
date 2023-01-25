@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AnfahrtsplanSeeder::class);
         $this->call(ImpressumTableSeeder::class);
+        $this->call(ContactSeeder::class);
     }
 }

@@ -1,11 +1,13 @@
-const dialogButton = document.querySelector("#dialogButton");
+const dialogButtons = document.querySelectorAll("#dialogButton");
 const dialog = document.querySelector("dialog");
 
-dialogButton.addEventListener("click", function (e) {
-    if (dialog) {
-        dialog.showModal();
-    }
-    closeModal();
+dialogButtons.forEach(dialogButton=>{
+    dialogButton.addEventListener("click", function (e) {
+        if (dialog) {
+            dialog.showModal();
+        }
+        closeModal();
+    })
 });
 if(dialog.open){
     closeModal();

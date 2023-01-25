@@ -8,6 +8,9 @@
     --main-theme:#fa1112;
     --secondary-theme:#fa3233;
     --admin-color: #006DFF;
+    --main-color:#f1f1f1;
+    --secondary-color:#e2e2e2;
+    --text-color:#1f1f1f;
 }
 body, div, form, dialog{
     background-color:var(--main-color);

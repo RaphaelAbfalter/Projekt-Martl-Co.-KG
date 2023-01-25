@@ -1,43 +1,25 @@
- @extends('dashboard')
+@extends('dashboard')
 @section('content')
-    <main>
-        <div class="cotainer">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <div class="card">
-                        <h3 class="card-header text-center">Registrieren</h3>
-                        <div class="card-body">
-                            <form action="{{ route('register.custom') }}" method="POST">
-                                @csrf
-                                <div class="form-group mb-3">
-                                    <input type="text" placeholder="Name" id="name" class="form-control" name="name"
-                                           required autofocus>
-                                    @if ($errors->has('name'))
-                                        <span class="text-danger">{{ $errors->first('name') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group mb-3">
-                                    <input type="text" placeholder="E-Mail" id="email_address" class="form-control"
-                                           name="email" required autofocus>
-                                    @if ($errors->has('email'))
-                                        <span class="text-danger">{{ $errors->first('email') }}</span>
-                                    @endif
-                                </div>
-                                <div class="form-group mb-3">
-                                    <input type="password" placeholder="Passwort" id="password" class="form-control"
-                                           name="password" required>
-                                    @if ($errors->has('password'))
-                                        <span class="text-danger">{{ $errors->first('password') }}</span>
-                                    @endif
-                                </div>
-                                <div class="d-grid mx-auto">
-                                    <button type="submit" class="btn btn-dark btn-block">Register User</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<main class="content-container">
+    <h1>Registrieren</h1>
+    <form action="{{ route('register.custom') }}" method="POST" class="user-form">
+        @csrf
+        <label for="name">Vorname und Nachname:</label>
+        <input type="text" placeholder="Name" id="name" class="input-design" name="name" required autofocus>
+        @if ($errors->has('name'))
+            <span class="text-danger">{{ $errors->first('name') }}</span>
+        @endif
+        <label for="email">E-Mail:</label>
+        <input type="text" placeholder="E-Mail" id="email" class="input-design" name="email" required autofocus>
+        @if ($errors->has('email'))
+            <span class="text-danger">{{ $errors->first('email') }}</span>
+        @endif
+        <label for="password">Passwort:</label>
+        <input type="password" placeholder="Passwort" id="password" class="input-design" name="password" required>
+        @if ($errors->has('password'))
+            <span class="text-danger">{{ $errors->first('password') }}</span>
+        @endif
+        <button type="submit" class="style-button form-button user-button">Benutzer registrieren</button>
+    </form>
+</main>
 @endsection

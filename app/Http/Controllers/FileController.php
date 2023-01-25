@@ -13,8 +13,9 @@ class FileController extends Controller
     public function download($id)
     {
         $file = DownloadFile::findOrFail($id);
+
         if ($file->visibility == 'all' || ($file->visibility == 'specific' && $file->user_id == auth()->id())) {
-            return Storage::download($file->path, $file->name);
+            return Storage::download($file->path, $file->fileName);
         } else {
             return back()->with('error', 'File is not available for download');
         }
@@ -48,8 +49,7 @@ class FileController extends Controller
             $path = Storage::putFile('public/files', $file);
             $visibility = $request->input('access_level');
 
-
-            $user_id = ($visibility == 'all') ? Auth::user()->id : $request->input('users')[0];
+            $user_id = ($visibility == 'all') ? Auth::user()->id : $request['user'];
             $fileName = $file->getClientOriginalName();
             
             DownloadFile::create(['path' => $path, 'fileName'=>$fileName, 'user_id' => $user_id, 'visibility' => $visibility]);

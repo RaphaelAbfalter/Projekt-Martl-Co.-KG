@@ -1,13 +1,13 @@
 @extends('dashboard')
 @section('content')
-<main>
+<main class="content-container">
     <h1>Nachricht von {{ $data['name'] }}</h1>
-    <div>
+    <section class="contacts-single-section">
         <p>Eintrag: {{$data['id']}}</p>
         <p>Email: {{$data['email']}}</p>
         <p>Nachricht: {{$data['message']}}</p>
         <p>{{date_format($data['created_at'], 'd.m.Y H:i')}}</p>
-        <a href="/delete/{{ $data['id'] }}">Löschen</a>
-    </div>
+        <a class="style-button form-button user-button" href="/delete/{{ $data['id'] }}">Löschen</a>
+    </section>
 </main>
 @endsection

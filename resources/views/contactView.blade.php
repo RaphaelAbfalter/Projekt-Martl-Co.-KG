@@ -9,8 +9,7 @@
                 <th>E-Mail</th>
                 <th>Nachricht</th>
                 <th>Datum</th>
-                <th></th>
-                <th></th>
+                <th>Aktionen</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +20,7 @@
                 <td>{{ $user['email'] }}</td>
                 <td>{{ substr($user['message'], 0, 20) }}</td>
                 <td>{{ date_format($user['created_at'], 'd.m.Y H:i') }}</td>
-                <td><a href="/contactMessage/{{ $user['id'] }}">Show</a></td>
-                <td><a href="/delete/{{ $user['id'] }}">Löschen</a></td>
+                <td><a class="style-button form-button show-button user-button" href="/contactMessage/{{ $user['id'] }}">Anzeigen</a><a class="style-button form-button user-button" href="/delete/{{ $user['id'] }}">Löschen</a></td>
             </tr>
             @endforeach
         </tbody>

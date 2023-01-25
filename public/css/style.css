@@ -623,6 +623,9 @@ input[type="submit"]:hover{
     border: solid 2px var(--secondary-color);
     box-shadow: inset 0 0 2rem 2px var(--secondary-color);
 }
+.show-button{
+    background-color: var(--admin-color);
+}
 /* NEWSLETTER */
 .newsletter-create{
     width: 30%;

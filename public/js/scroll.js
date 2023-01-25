@@ -13,7 +13,7 @@ function stickyHeader(){
 }
 function stickyFooter(){
     const footer = document.querySelector("footer");
-    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight) -1) {
+    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight) -20) {
         footer.style.bottom="0";
     }
     else{

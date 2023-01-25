@@ -504,7 +504,19 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
     grid-row:3;
 }
 /* VIDEO */
-.video-section,.newsletter-create, .newsletter-create>form, .contact-create, .arrival-section, .impressum-section, .impressum-edit, .arrival-edit, .newsletter-edit, .download-section, .download-section>form, .download-section>form>span{
+.video-section,
+.newsletter-create,
+.newsletter-create>form,
+.contact-create,
+.arrival-section,
+.impressum-section,
+.impressum-edit,
+.arrival-edit,
+.newsletter-edit,
+.download-section,
+.download-section>form,
+.download-section>form>span,
+.contacts-single-section{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -528,7 +540,8 @@ footer>span:nth-child(2)>a:not(:empty) + a:not(:empty)::before { content: ' • 
 .video-section>ul,
 .arrival-section,
 .arrival-section>div,
-.download-section{
+.download-section,
+.contacts-single-section{
     padding: 1rem 1rem;
 }
 .video-section,
@@ -603,6 +616,12 @@ input[type="submit"]:hover{
 .contacts-table>tbody>tr>th,
 .contacts-table>tbody>tr>td{
     padding:0.4rem;
+}
+.contacts-single-section{
+    align-items: flex-start;
+    border-radius: 0.2rem;
+    border: solid 2px var(--secondary-color);
+    box-shadow: inset 0 0 2rem 2px var(--secondary-color);
 }
 /* NEWSLETTER */
 .newsletter-create{

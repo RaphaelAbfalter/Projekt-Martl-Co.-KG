@@ -13,15 +13,15 @@ class ImpressumTableSeeder extends Seeder
     public function run()
     {
         DB::table('impressum')->insert([
-            'firmenanschrift' => 'Example Street 12, 12345 City',
-            'unternehmensgegenstand' => 'Example Business',
-            'UIDNummer' => '12345678',
-            'GLN' => '876543210',
-            'GISA' => '987654321',
-            'telefonnummer' => '+1234567890',
-            'fax' => '+0987654321',
-            'email' => 'example@example.com',
-            'adresse' => 'Example Street 12, 12345 City',
+            'firmenanschrift' => 'Martl & Co.KG',
+            'unternehmensgegenstand' => 'Atomationstechnik',
+            'UIDNummer' => 'ATU12345678',
+            'GLN' => '1234567891234',
+            'GISA' => '12345678',
+            'telefonnummer' => '01234/56789',
+            'fax' => '01234/56789-0',
+            'email' => 'admin@regina-martl.at',
+            'adresse' => 'Wienerstrasse 181, 4020 Linz, Österreich',
         ]);
     }
 }

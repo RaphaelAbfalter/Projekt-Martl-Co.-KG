@@ -14,5 +14,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AnfahrtsplanSeeder::class);
         $this->call(ImpressumTableSeeder::class);
         $this->call(ContactSeeder::class);
+        $this->call(NewsletterSeeder::class);
+        $this->call(SubscriberSeeder::class);
     }
 }

@@ -3,10 +3,11 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use Faker\Generator as Faker;
-use App\Model;
+use App\Models\Newsletter;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Newsletter::class, function (Faker $faker) {
     return [
-        //
+        'title' => $faker->word,
+        'body' => $faker->text
     ];
 });
